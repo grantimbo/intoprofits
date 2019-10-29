@@ -95,6 +95,10 @@
     $('a.res-link:first-child').addClass('active')
     $('.rslts-plylst-main').html(firstVid)
 
+
+    $('.curriculum-menu:first-child').addClass('active').children('.cur-submen').addClass('active')
+
+
     // video playlist link
     $(document).on('click', '.rslts-plylst-vids .res-link', function(e) {
         e.preventDefault();
