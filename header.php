@@ -11,7 +11,7 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta property="fb:app_id" content="153590798408172" />
+		
 
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
 	    <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
@@ -26,6 +26,8 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 
+		<meta property="fb:app_id" content="153590798408172" />
+
 		<?php wp_head(); ?>
 		
 	</head>
@@ -35,21 +37,14 @@
 				<div class="mobile-menu-wrap">
 					<header class="header clear">
 					<a class="icon-cross mobile-menu"></a>
-					<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo.png" alt="Into Profits"></a>
+					<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.png" alt="Into Profits"></a>
 					<?php head_nav(); ?>
 					</header>
 				</div>
 				<a class="icon-menu mobile-menu"></a>
-				<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo.png" alt="Into Profits"></a>
+				<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.png" alt="Into Profits"></a>
 				<div class="desktop-menu-wrap">
 					<?php head_nav(); ?>
 				</div>
 			</div>
 		</header>
-
-
-
-		
-		
-
-		

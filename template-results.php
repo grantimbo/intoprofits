@@ -1,6 +1,5 @@
 <?php /* Template Name: Results */ get_header(); ?>
 
-
 <main role="main" class="container default-container">
 	<div class="wrap clear">
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>

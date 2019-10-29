@@ -1,8 +1,8 @@
 <?php
 /*
  *  Author: Grant Imbo
- *  URL: grantimbo.com
- *  Site functions for grantimbo.com
+ *  Author URL: grantimbo.com
+ *  Description: Site functions for intoprofits.com
  */
 
 /*------------------------------------*\
@@ -33,6 +33,9 @@ if (function_exists('add_theme_support')) {
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
+
+    // Post format support
+    add_theme_support('post-formats', array('video'));
 
 }
 
@@ -89,14 +92,14 @@ function grantimbo_header_scripts() {
         wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('grantimboscripts', get_template_directory_uri() . '/js/scripts.js', array(), '2.5'); // Site Functionalities
+        wp_register_script('grantimboscripts', get_template_directory_uri() . '/js/scripts.js', array(), '2.9'); // Site Functionalities
         wp_enqueue_script('grantimboscripts'); // Enqueue it!
 
         wp_register_script('tobi', get_template_directory_uri() . '/js/tobi.min.js', array('jquery'), '1.0'); // Conditional script(s)
-        wp_enqueue_script('tobi'); // Enqueue it!a
-
-        wp_register_script('mansory', '//cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.js', array('jquery'), '4.2.2'); // Mansory
-        wp_enqueue_script('mansory'); // Enqueue it!a
+        wp_enqueue_script('tobi'); // Enqueue it!
+		
+		wp_register_script('mansory', '//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js', array('jquery'), '3.3.2'); // Mansory
+        wp_enqueue_script('mansory'); // Enqueue it!
     }
 }
 
@@ -112,7 +115,7 @@ function grantimbo_styles() {
     wp_register_style('normalize', '//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css', array(), '2.1.3', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('grantimbo', get_template_directory_uri() . '/style.css', array(), '2.5', 'all');
+    wp_register_style('grantimbo', get_template_directory_uri() . '/style.css', array(), '4.3', 'all');
     wp_enqueue_style('grantimbo'); // Enqueue it!
 
     wp_register_style('tobicss', get_template_directory_uri() . '/css/tobi.min.css', array(), '1.0', 'all');
@@ -338,7 +341,7 @@ function custom_login_css() {
 
 // change logo link on login form
 function custom_login_header_url($url) {
-    return 'http://grantimbo.com/';
+    return 'http://intoprofits.com/';
 }
 
 
@@ -352,6 +355,13 @@ function remove_menus() {
     }
 
 }
+
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+wp_enqueue_style( 'dashicons' );
+}
+
+
 
 function activated_adminbar() {
     global $wp_admin_bar;
@@ -370,7 +380,7 @@ function activated_dashboard_widget() {
 
     wp_add_dashboard_widget(
              'activated_dashboard_widget',              // Widget slug.
-             'Into Profits Quick Shortcuts',  // Title.
+             'Into Profits Quick Shortcuts',  			// Title.
              'activated_get_menu'                       // Callback function.
         );  
 }
@@ -383,23 +393,25 @@ function activated_get_menu() {
 
     <style>
         .btn-custom-setting {
-            background: #00a8e1;
-            color: #FFFFFF;
+            background: #0073aa;
+            color: #fff;
             font-size: 16px;
             padding: 12px 20px;
-            display: inline-block;
+            display: block;
+            margin-bottom: 4px;
+            border-radius: 3px;
         }
         .btn-custom-setting:hover {
-            background: #006f95;
+            background: #1285b1;
             color: #ade0ee;
         }
-            
     </style>
 
     <div class="grntx-wrap clear">
-        <a href="post.php?post=102&action=edit" class="btn-custom-setting">Client Results</a>
+        <a href="admin.php?page=options" class="btn-custom-setting">Options</a>
         <a href="edit.php" class="btn-custom-setting">Articles</a>
         <a href="edit.php?post_type=results" class="btn-custom-setting">Results</a>
+        <a href="admin.php?page=modules" class="btn-custom-setting">Modules</a>
     </div>
 
     <?php //-- html end -->
@@ -411,43 +423,13 @@ function activated_get_menu() {
     Custom Post Types
 \*------------------------------------*/
 
-// Create Custom Post type for settings
-function CustomSettings_posttype() {
-    register_post_type('custom-settings', 
-        array(
-        'labels' => array(
-            'name' => __('Settings', 'settings_posttype'), // Rename these to suit
-            'singular_name' => __('Setting', 'settings_posttype'),
-            'add_new' => __('Add New', 'settings_posttype'),
-            'add_new_item' => __('Add New Setting', 'settings_posttype'),
-            'edit' => __('Edit Setting', 'settings_posttype'),
-            'edit_item' => __('Edit Setting', 'settings_posttype'),
-            'new_item' => __('New Setting', 'settings_posttype'),
-            'view' => __('View Setting', 'settings_posttype'),
-            'view_item' => __('View Setting', 'settings_posttype'),
-            'search_items' => __('Search Settings', 'settings_posttype'),
-            'not_found' => __('No Settings found', 'settings_posttype'),
-            'not_found_in_trash' => __('No Settings found in Trash', 'settings_posttype')
-        ),
-        'public' => true,
-        'hierarchical' => false,
-        'has_archive' => false,
-        'menu_position' => 2,
-        'menu_icon' => 'dashicons-admin-generic',
-        'supports' => array(
-            'editor'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => false
-    ));
-}
 
-
-// Create Custom Post type for settings
+// Results Post Type
 function results_posttype() {
     register_post_type('results', 
         array(
         'labels' => array(
-            'name' => __('Results', 'results'), // Rename these to suit
+            'name' => __('Results', 'results'),
             'singular_name' => __('Result', 'results'),
             'add_new' => __('Add New', 'results'),
             'add_new_item' => __('Add New Result', 'results'),
@@ -462,19 +444,49 @@ function results_posttype() {
         ),
         'public' => true,
         'hierarchical' => false,
-        'menu_position' => 4,
-        'has_archive' => false,
-        'menu_icon' => 'dashicons-star-filled',
+        'menu_position' => 5,
+        'has_archive' => true,
+        "rewrite" => array( "slug" => "results", "with_front" => false ),
+        'menu_icon' => 'dashicons-format-chat',
+        'show_in_rest' => true,
         'supports' => array(
             'title',
-            'editor',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        ),
         'can_export' => false
     ));
 }
 
 
+function register_acf_options_pages() {
+
+    // Check function exists.
+    if( !function_exists('acf_add_options_page') )
+        return;
+
+    // register options page.
+    $module_page = acf_add_options_page(array(
+        'page_title'    => __('Modules'),
+        'menu_title'    => __('Modules'),
+        'menu_slug'     => 'modules',
+        'position' => 6,
+        'capability'    => 'edit_posts',
+        'icon_url' => 'dashicons-video-alt3',
+        'redirect'      => false
+    ));
+
+    $option_page = acf_add_options_page(array(
+        'page_title'    => __('Settings'),
+        'menu_title'    => __('Settings'),
+        'menu_slug'     => 'options',
+        'position' => 2,
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+
+}
+
+// Hook into acf initialization.
+add_action('acf/init', 'register_acf_options_pages');
 
 
 /*------------------------------------*\
@@ -486,7 +498,6 @@ add_action('init', 'grantimbo_header_scripts'); // Add Custom Scripts to wp_head
 // add_action('wp_print_scripts', 'grantimbo_conditional_scripts'); // Add Conditional Page Scripts
 add_action('wp_enqueue_scripts', 'grantimbo_styles'); // Add Theme Stylesheet
 add_action('init', 'register_menus'); // Add HTML5 Blank Menu
-add_action('init', 'CustomSettings_posttype');
 add_action('init', 'results_posttype');
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'grantimbo_pagination'); // Add our HTML5 Pagination
