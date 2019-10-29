@@ -1,1 +1,1 @@
-# itpf-mbrs
+# WP theme for intoprofits.com
