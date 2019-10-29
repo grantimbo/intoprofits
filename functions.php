@@ -25,8 +25,6 @@ if (function_exists('add_theme_support')) {
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
 
-    // Post format support
-    add_theme_support('post-formats', array('video'));
 }
 
 
