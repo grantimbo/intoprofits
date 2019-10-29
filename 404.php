@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<main role="main" class="container">
 		<div class="wrap">
 			<article class="lost-page">
 				<h1><?php _e( 'Sorry,', 'html5blank' ); ?></h1>

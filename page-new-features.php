@@ -255,7 +255,7 @@
     margin-bottom: 2px;
 }
 .cur-submen-items .cur-submen {
-    padding: 0 20px;
+    padding: 1px 20px;
     background: #fbfbfb;
     font-size: 13px;
 }

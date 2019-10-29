@@ -1,4 +1,4 @@
 <div class="pagination clear">
-	<?php grantimbo_pagination(); ?>
+	<?php intoprofits_pagination(); ?>
 </div>
 <!-- /pagination -->

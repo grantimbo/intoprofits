@@ -1,40 +1,12 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.9
+// Version : 2.10
 // Description : Custom Script for audunsson.com
 // ---------------------------
 
 
 $(function() {
-
-
-	metrics = function() {
-
-		function numberWithCommas(number) {
-		    var parts = number.toString().split(".");
-		    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		    return parts.join(".");
-		}
-
-
-		$('.count').each(function () {
-		    $(this).prop('Counter',0).animate({
-		        Counter: $(this).text()
-		    }, {
-		        duration: 2000,
-		        easing: 'swing',
-		        step: function (now) {
-		            $(this).text(Math.ceil(now));
-
-		            var num = $(this).text();
-	                var commaNum = numberWithCommas(num);
-	                $(this).text(commaNum);
-		        }
-		    });
-		});
-
-	},
 
 
 	menuShow = function() {
@@ -58,7 +30,6 @@ $(function() {
 	},
 
 
-
 	menuActive = function() {
 
 		if ( $('body').hasClass('post-type-archive-results') || $('body').hasClass('single-results')) {
@@ -71,7 +42,6 @@ $(function() {
 
 		}
 	},
-
 
 
 	blogFuntions = function() {
@@ -160,7 +130,6 @@ $(function() {
 	--------------------------------*/
 	menuShow();
 	menuActive();
-	metrics();
 	blogFuntions();
 	openReview();
 	metricScroll();
