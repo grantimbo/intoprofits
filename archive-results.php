@@ -59,7 +59,7 @@
         
         <!-- review footer -->
         <div class="reviews-footer">
-            <a href="<?php echo get_site_url(); ?>/case-study" class="button">Access The Free Case Study</a>
+            <a href="<?php echo get_site_url(); ?>/case-study" class="button go-intoprofits">Access The Free Case Study</a>
         </div>
             
     </div>

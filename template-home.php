@@ -98,7 +98,7 @@
 		<p>To keep it that way we are selective about who we work with and accept new students via application only.</p> 
 		<p>If you aren’t 100% committed to growing a successful physical products brand, please DO NOT apply.</p>
 		<p>This is only for people who are ready to step up and build a powerful, 7 to 8-figure business.</p>
-        <a class="button" style="margin-top: 40px; font-size: 20px; padding: 18px 30px;" href="https://intoprofits.com/application">Apply Now To See If You Qualify</a>
+        <a style="margin-top: 40px" class="button go-intoprofits" href="https://intoprofits.com/application">Apply Now To See If You Qualify</a>
     </div>
 </section>
 

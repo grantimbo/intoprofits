@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.5
+	Version: 4.6
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -26,7 +26,6 @@ body {
 
 	/*taken from global box-sizing*/
 	-webkit-font-smoothing:antialiased;
-	font-smoothing:antialiased;
 	text-rendering:optimizeLegibility;
 }
 
@@ -153,6 +152,23 @@ button, html input[type="button"], input[type="reset"], input[type="submit"], .b
 button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover {
 	background: #154d9c;
 	color: #fff;
+}
+.button.go-intoprofits {
+	color: #ffffff;
+    font-weight: 600;
+    background-color: #0047ab;
+    font-size: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    line-height: 1.5;
+    padding: 15px 40px;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+}
+.button.go-intoprofits:hover {
+	background-color: #0047ab;
+	box-shadow: inset 0 2px 2px 0 rgba(255,255,255,0.22), 0 233px 233px 0 rgba(255,255,255,0.12) inset;
 }
 
 
@@ -781,19 +797,6 @@ a.transcript-readmore {
     padding: 50px 0;
     text-transform: uppercase;
 }
-.reviews-footer a.button{
-	color: #ffffff;
-    font-weight: 600;
-    background-color: #0047ab;
-    font-size: 22px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-	font-family: Arial, Helvetica, sans-serif;
-}
-.reviews-footer a.button:hover {
-	background-color: #0c69a8;
-}
 .reviews-thumb {
     position: relative;
     width: 100%;
@@ -1287,11 +1290,11 @@ a.close-menu {
 	}
 	.copyright {
 		float: left;
-		display: inline-block;
+		display: block;
 	}
 	ul#menu-footer-menu {
 		float: right;
-		display: inline-block;
+		display: block;
 	}
 	.metrics {
 		text-align: left;
@@ -1555,7 +1558,6 @@ a.close-menu {
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
