@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.6
+	Version: 4.6.1
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -155,7 +155,7 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
 }
 .button.go-intoprofits {
 	color: #ffffff;
-    font-weight: 600;
+    font-weight: 700;
     background-color: #0047ab;
     font-size: 22px;
     border: 1px solid rgba(0, 0, 0, 0.2);
