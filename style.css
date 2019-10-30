@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.6.1
+	Version: 4.6.2
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -150,9 +150,13 @@ button, html input[type="button"], input[type="reset"], input[type="submit"], .b
 	display: inline-block;
 }
 button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover {
-	background: #154d9c;
+	background: #0047ab;
 	color: #fff;
+	box-shadow: inset 0 2px 2px 0 rgba(255,255,255,0.22), 0 233px 233px 0 rgba(255,255,255,0.12) inset;
 }
+
+
+
 .button.go-intoprofits {
 	color: #ffffff;
     font-weight: 700;
@@ -183,6 +187,7 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
 }
 .container {
 	padding: 20px;
+	margin-top: 64px;
 }
 .wrap section,
 .wrap aside {
@@ -215,11 +220,15 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
 
 /* header */
 .header {
-    height: 24px;
+	height: 24px;
     padding: 20px 0;
     background: #efefef;
     text-align: center;
-    position: relative;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 .logo {
 	position: relative;
@@ -411,7 +420,8 @@ ul#menu-footer-menu a {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 1.5rem;
+	padding: 1.5rem;
+	margin-top: 64px;
 }
 .v-graph-wrap {
     position: absolute;
@@ -634,7 +644,8 @@ a:hover h2.article-title {
     padding: 10px 16px;
     text-align: center;
     top: 10px;
-    left: 10px;
+	left: 10px;
+	max-width: 40px;
 }
 .comment-count > span {
 	display: block;
@@ -1218,6 +1229,16 @@ a.close-menu {
 }
 
 
+@media screen and (max-width: 782px) {
+	html #wpadminbar {
+		display: none;
+	}
+	html.js {
+		margin: 0 !important;
+	}
+}
+
+
 
 /*------------------------------------*\
     RESPONSIVE
@@ -1258,9 +1279,6 @@ a.close-menu {
 	    top: 0;
 	    right: 0;
 	    left: 0;
-	}
-	body.logged-in.admin-bar header.header {
-		top: 32px;
 	}
 	.metrics br {
 		display: block;
@@ -1483,6 +1501,11 @@ a.close-menu {
 
 }
 
+@media (min-width: 782px) {
+	body.logged-in.admin-bar header.header {
+		top: 32px;
+	}
+}
 
 /* Medium Devices, Desktops */
 @media (min-width: 992px) {
