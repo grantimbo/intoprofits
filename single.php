@@ -36,7 +36,7 @@
 						<div class="video-transcript">
 						    <?php the_field('transcript'); ?>
 						    <span class="transcript-readmore-wrap">
-								<a class="transcript-readmore">Read More</a>
+								<a class="button transcript-readmore">Read More</a>
 							</span>
 						</div>
 					<?php else: ?>
