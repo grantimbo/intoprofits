@@ -441,6 +441,39 @@ function results_posttype() {
     ));
 }
 
+// Programs Post Type
+add_action('init', 'programs_posttype');
+function programs_posttype() {
+    register_post_type('programs', 
+        array(
+        'labels' => array(
+            'name' => __('Programs', 'programs'),
+            'singular_name' => __('Program', 'programs'),
+            'add_new' => __('Add New', 'programs'),
+            'add_new_item' => __('Add New Program', 'programs'),
+            'edit' => __('Edit Program', 'programs'),
+            'edit_item' => __('Edit Program', 'programs'),
+            'new_item' => __('New Program', 'programs'),
+            'view' => __('View Program', 'programs'),
+            'view_item' => __('View Program', 'programs'),
+            'search_items' => __('Search Programs', 'programs'),
+            'not_found' => __('No Programs found', 'programs'),
+            'not_found_in_trash' => __('No Programs found in Trash', 'programs')
+        ),
+        'public' => true,
+        'hierarchical' => false,
+        'menu_position' => 6,
+        'has_archive' => true,
+        "rewrite" => array( "slug" => "programs", "with_front" => false ),
+        'menu_icon' => 'dashicons-feedback',
+        'show_in_rest' => true,
+        'supports' => array(
+            'title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'post-formats'
+        ),
+        'can_export' => false
+    ));
+}
+
 // Hook into acf initialization.
 add_action('acf/init', 'register_acf_options_pages');
 function register_acf_options_pages() {
