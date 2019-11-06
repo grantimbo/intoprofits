@@ -14,10 +14,10 @@
 <section class="programs-apex-seller-wrap">
 	<div class="wrap">
 
-        <img class=programs-apex-graphic" src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
+        <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
         <div class="programs-apex-graphic">
-            <h2>Apex Seller™</h2>
-            <b>Stage: Scaling Up</b>
+            <h1>Apex Seller™</h1>
+            <b>Stage: Scaling Up <span class="scaleProgbar"></span></b>
             <p>How to scale into 7- and 8-figures by leveraging professional grade systems & data, full-scale PPC advertising, unique products and a world-class team.</p>
             <a href="<?php echo site_url(); ?>/programs/apex-seller" class="button">Learn More</a>
         </div>

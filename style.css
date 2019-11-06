@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.9.0
+	Version: 4.9.1
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -1143,21 +1143,64 @@ a.transcript-readmore {
 /*-------------------------------------*\
 	Programs Archive
 \*-------------------------------------*/
+
+.programs-container {
+	font-size: 1.6rem;
+}
+.programs-head h1 {
+	font-size: 2.5rem;
+}
 img.programs-apex-graphic {
 	max-width: 450px;
     width: 100%;
 }
 .programs-apex-seller-wrap {
+	font-size: 1.6rem;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     background: #efefef;
 }
-.programs-apex-seller-wrap p {
-    margin: .2rem 0 1.2rem;
+.programs-apex-seller-wrap h1 {
+	font-size: 2.5rem;
 }
-
-
+.programs-apex-seller-wrap a.button {
+	text-transform: uppercase;
+    font-weight: bold;
+}
+.scaleProgbar {
+	width: 120px;
+    height: 8px;
+    background: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+	display: inline-block;
+	position: relative;
+}
+.scaleProgbar:before {
+	content: "";
+	width: 120px;
+	height: 8px;
+	background: #0047ab;
+	left: -100% ;
+	position: absolute;
+	top: 0;
+	-webkit-animation-name: progressbar; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 8s; /* Safari 4.0 - 8.0 */
+	animation-name: progressbar;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+@-webkit-keyframes progressbar {
+	from {left: -100%;}
+	to {left: 0;}
+  }
+  
+  /* Standard syntax */
+  @keyframes progressbar {
+	from {left: -100%;}
+	to {left: 0;}
+  }
 
 
 /*-------------------------------------*\
@@ -2134,10 +2177,24 @@ a.close-menu {
 
 
 	/* programs page */
+	.programs-container {
+		font-size: 2rem;
+	}
+	.programs-head h1 {
+		font-size: 3.5rem;
+	}
+
+	.programs-apex-seller-wrap {
+		font-size: 2rem;
+	}
+	.programs-apex-seller-wrap h1 {
+		font-size: 3.5rem;
+	}
+	
 	.programs-container .wrap {
 		text-align: center;
-		margin: 5rem auto;
-		max-width: 700px;
+		margin: 8rem auto;
+		max-width: 800px;
 	}
 	.programs-apex-seller-wrap .wrap {
 		display: grid;
