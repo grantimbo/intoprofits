@@ -186,7 +186,7 @@ $(function() {
 	lastUpdated = function() {
 
 		const m = new Date();
-		m.setDate(m.getDate()-2);
+		m.setDate(m.getDate()-1);
 
 		var dateString =  ("0" + (m.getUTCMonth()+1)).slice(-2) + "/" +  ("0" + m.getUTCDate()).slice(-2) + "/" + m.getUTCFullYear();
 
