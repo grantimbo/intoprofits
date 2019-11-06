@@ -26,7 +26,7 @@ Template Post Type: programs
 					<li>Hire and manage a world-class team</li>
 					<li>Scale into 7&#8209;figure profits</li>
 				</ul>
-				<a href="#" class="button">APPLY NOW</a>     
+				<a href="<?php echo site_url(); ?>/apply" class="button">APPLY NOW</a>     
 				<p class="info"><b>Got a team? No problem!</b>Give access to specific workflows, tools and training to hand-off the work.</p>
 			</div>
 		</div>
@@ -361,7 +361,7 @@ Template Post Type: programs
 				<p><b>How it works</b>To ensure the highest quality for every member of Apex Seller&#8482;, we only take in a limited amount of new students at a time. We also have to make sure you’ve reached the stage where our methodology can be implemented effectively. Therefore our application process consists of a short form and a quick call with a member of our team.</p>
 				<p><b>Free call</b>After you submit the application form, you will be taken to a page to schedule your free call with someone from our team. On this call we will explore your current situation and find out if Apex Seller&#8482; is a good fit for you and your business. If it is, you will be invited to join. There is no application fee.</p>
 				
-				<a href="<?php echo site_url(); ?>/application" class="button">Apply Now</a>
+				<a href="<?php echo site_url(); ?>/apply" class="button">Apply Now</a>
 			</li>
 
 		</ul>
@@ -404,7 +404,7 @@ Template Post Type: programs
 
 <div class="apex-section get-started">
 	<p>Get started for free</p>
-	<a href="<?php echo site_url(); ?>/application" class="button">Apply Today</a>
+	<a href="<?php echo site_url(); ?>/apply" class="button">Apply Today</a>
 </div>
 
 
