@@ -1137,13 +1137,25 @@ a.transcript-readmore {
 	}
 }
 
-/*------------------------*\
-	Programs    
-\*------------------------*/ 
 
 
 
-
+/*-------------------------------------*\
+	Programs Archive
+\*-------------------------------------*/
+img.programs-apex-graphic {
+	max-width: 450px;
+    width: 100%;
+}
+.programs-apex-seller-wrap {
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #efefef;
+}
+.programs-apex-seller-wrap p {
+    margin: .2rem 0 1.2rem;
+}
 
 
 
@@ -1778,6 +1790,7 @@ a.close-menu {
 
 @media (min-width: 690px) {
 
+
 	/* apex-page main */
 	.apex-section-description {
 		font-size: 2rem;
@@ -2118,6 +2131,23 @@ a.close-menu {
 		margin-bottom: 70px;
 	}
 
+	
+
+	/* programs page */
+	.programs-container .wrap {
+		text-align: center;
+		margin: 5rem auto;
+		max-width: 700px;
+	}
+	.programs-apex-seller-wrap .wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.5rem;
+		justify-items: center;
+		align-items: center;
+		margin: 3rem auto;
+		text-align: left;
+	}
 
 
     /* apex-page - main */
