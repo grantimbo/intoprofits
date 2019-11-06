@@ -241,10 +241,10 @@ Template Post Type: programs
 										<?php the_sub_field('module_subcontents'); ?>
 									</div>
 								<?php elseif( get_row_layout() == 'action_items' ): ?>
-									<div class="cur-submen-title"><span class="dashicons cur-action"></span>Action items<span class="cur-time">10 Items</span></div>
+									<div class="cur-submen-title"><span class="dashicons cur-action"></span>Action Items<span class="cur-time"><?php the_sub_field('module_action'); ?></span></div>
 		
 								<?php elseif( get_row_layout() == 'question_menu' ): ?>
-									<div class="cur-submen-title"><span class="dashicons cur-question"></span>Questions<span class="cur-time">2 live Q&A Calls</span></div>
+									<div class="cur-submen-title"><span class="dashicons cur-question"></span>Questions<span class="cur-time"><?php the_sub_field('module_question'); ?></span></div>
 								<?php endif; ?>
 		
 		
