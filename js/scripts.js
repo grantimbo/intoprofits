@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.10
+// Version : 2.12.0
 // Description : Custom Script for audunsson.com
 // ---------------------------
 
@@ -122,6 +122,77 @@ $(function() {
 
 	},
 
+
+	reviewsVideoPlayer = function() {
+
+		var firstVid = $('.res-link:first-child')[0].dataset.video
+
+		$('a.res-link:first-child').addClass('active')
+		$('.results-playlist-main').html(firstVid)
+
+
+		$('.curriculum-contents .curriculum-menu:first-child').addClass('active').children('.cur-submen').addClass('active')
+
+
+		// video playlist link
+		$(document).on('click', '.results-playlist-vids .res-link', function(e) {
+			e.preventDefault();
+
+			let video = this.getAttribute('data-video');
+
+			$('.results-playlist-main').html(video)
+			$(this).addClass('active').siblings().removeClass('active')
+		})
+
+		// accordion modules
+		$(document).on('click', '.curriculum-menu a', function(e) {
+			e.preventDefault();
+
+			console.log('tae')
+
+			$(this).siblings('div').toggleClass('active')
+			$(this).closest('div').toggleClass('active')
+
+
+		})
+
+		// accordion modules sub menu
+		$(document).on('click', 'span.cur-toggle', function(e) {
+			e.preventDefault();
+
+			console.log($(this).toggleClass('active').closest('.cur-submen-title').siblings('.cur-submen').toggleClass('active'))
+
+		})
+
+		// toggle - collapse all 
+		$(document).on('click', '.curriculum-toggle', function(e) {
+			e.preventDefault();
+
+			if ($(this).html() == 'Expand All') {
+				$(this).html('Collapse All')
+				$('.curriculum-menu').addClass('active')
+				$('.cur-submen').addClass('active')
+				$('.cur-submen-items').addClass('active')
+			} else {
+				$(this).html('Expand All')
+				$('.curriculum-menu').removeClass('active')
+				$('.cur-submen').removeClass('active')
+				$('.cur-submen-items').removeClass('active')
+			}
+		})
+	},
+
+
+	lastUpdated = function() {
+
+		const m = new Date();
+		m.setDate(m.getDate()-2);
+
+		var dateString =  ("0" + (m.getUTCMonth()+1)).slice(-2) + "/" +  ("0" + m.getUTCDate()).slice(-2) + "/" + m.getUTCFullYear();
+
+		$('.last-updated').html('Last updated: ' + dateString );
+	},
+
 		
 	
 
@@ -133,7 +204,8 @@ $(function() {
 	blogFuntions();
 	openReview();
 	metricScroll();
-
+	reviewsVideoPlayer();
+	lastUpdated();
 
 	console.log('-------------------------------');
 	console.log('|    Written by Grant Imbo    |');

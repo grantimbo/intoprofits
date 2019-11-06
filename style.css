@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.6.2
+	Version: 4.8.0
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -22,7 +22,7 @@ html {
 	color: #000;
 }
 body {
-	font:300 14px/1.4 'Trebuchet MS', Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+	font:300 14px/1.4 'Raleway', sans-serif;
 
 	/*taken from global box-sizing*/
 	-webkit-font-smoothing:antialiased;
@@ -66,7 +66,7 @@ a:active {
 	outline:0;
 }
 h1, h2, h3, h4, h5, h6, b, strong{
-	line-height: 1.1em;
+	line-height: 1.2em;
 }
 h1 { font-size: 1.5em; }
 h2 { font-size: 1.4em; }
@@ -746,9 +746,22 @@ a.transcript-readmore {
 
 
 
-/*-----------------*\
+
+
+
+
+
+
+
+/*------------------------------------------------------*\
+
 	Results Page    
-\*-----------------*/
+
+\*------------------------------------------------------*/
+
+
+
+
 .single-review-container {
 	padding-top: 40px;
 }
@@ -879,7 +892,7 @@ a.transcript-readmore {
 	height: 70px;
 }
 .exc-rate {
-    background: url(img/star-ratings.png);
+    background: url(img/apex-seller-sprite.png);
     width: 112px;
     height: 20px;
     background-position: 0 0;
@@ -1124,11 +1137,484 @@ a.transcript-readmore {
 	}
 }
 
+/*------------------------*\
+	Programs    
+\*------------------------*/ 
+
+
+
+
+
+
+
+
+/*-------------------------------------*\
+	Programs - Apex Seller
+\*-------------------------------------*/
+
+
+.apex-section {
+	padding: 20px;
+	overflow: hidden;
+}
+.apex-graphics,
+.student-results,
+.program-components,
+.overview {
+	background: #efefef;
+}
+.student-results,
+.apex-section-title,
+.apex-section-description,
+.program-components,
+.get-started {
+	text-align: center;
+}
+.apex-section-title.withSub {
+	margin-bottom: .5rem;
+}
+.apex-section-description {
+	margin: 0 0 3rem;
+}
+
+
+/* apex main */
+.apex-side-wrap {
+	background: #efefef;
+	padding: 20px;
+	font-size: 1.4rem;
+}
+img.apex-program-graphic {
+	margin: 3rem auto;
+	display: block;
+}
+.apex-side-wrap h1 {
+	font-size: 3rem;
+    margin: 0 0 1.2rem;
+}
+.apex-side-wrap .ratings {
+    margin-bottom: 1.2rem;
+}
+.apex-side-wrap .ratings .exc-rate {
+	position: relative;
+    display: inline-block;
+    top: auto;
+    right: auto;
+    margin: 0 16px 0 0;
+}
+.apex-side-wrap .ratings a.see-results {
+	position: relative;
+    top: -6px;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.apex-side-wrap .last-updated {
+	padding: 8px 10px;
+	background: #d7ecbc;
+	border-radius: 2px;
+}
+.apex-side-wrap ul {
+	list-style: none;
+	line-height: 3rem;
+	margin: 2rem 0;
+	padding: 0;
+	font-size: 1.3rem;
+}
+.apex-side-wrap ul li:before {
+	content: "";
+    background: url(img/apex-seller-sprite.png) no-repeat -126px -1px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: .5rem;
+    position: relative;
+    top: 5px;
+}
+.apex-side-wrap .button {
+	display: block;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+.apex-side-wrap .info {
+	padding: 2rem;
+    background: #d1dfee;
+    margin: 2rem 0 0 0;
+}
+.apex-side-wrap .info b {
+	display: block;
+	font-weight: 700;
+	margin-bottom: .5rem;
+}
+
+
+
+/* graphics icon */
+.apex-graphics-icons {
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-auto-rows:minmax(100px, auto);
+	grid-gap:1.5rem;
+	justify-items:stretch;
+	align-items:stretch;
+	margin-bottom: 3rem;
+	text-align: center;
+}
+.apex-icon {
+	background: url(img/apex-seller-sprite.png) no-repeat 0 -142px;
+	width:70px;
+	height: 68px;
+	display: inline-block;
+}
+.apex-icon.objective { background-position-x: -76px; }
+.apex-icon.length { background-position-x: -151px; }
+.apex-icon.format { background-position-x: -224px; }
+.apex-icon.access { background-position-x: -297px; }
+.apex-graphics-icons b {
+	display: block;
+    font-size: 1.2rem;
+}
+.apex-what-who-why {
+	margin: 2rem 0;
+	text-align: left;
+}
+.apex-what-who-why h5 { 
+	margin: 0 0 .5rem;
+}
+.apex-what-who-why p {
+	margin: 0 0 2rem;
+}
+
+
+
+
+/* complete and connected */
+.complete-connected figure {
+	display:grid;
+	grid-template-columns:1fr 3fr;
+	grid-auto-rows:minmax(100px, auto);
+	grid-gap:1rem;
+	justify-items:stretch;
+	align-items:stretch;
+	margin-bottom: 3rem;
+}
+.complete-connected b {
+	display: block;
+	margin-bottom: .5rem;
+}
+.imgConnected {
+	background: url(img/apex-seller-sprite.png) no-repeat 0 -228px;
+	width:88px;
+	height: 90px;
+	display: inline-block;
+}
+.imgConnected.strategy { background-position: -95px -228px;}
+.imgConnected.chain { background-position: -187px -228px; }
+.imgConnected.cashflow { background-position: -278px -228px; }
+.imgConnected.systemdata { background-position: -2px -315px; }
+.imgConnected.advertising { background-position: -187px -317px; }
+.imgConnected.optimization { background-position: -2px -407px; }
+.imgConnected.conversion { background-position: -93px -317px; }
+.imgConnected.hiring { background-position: -279px -317px; }
+.imgConnected.operations { background-position: -94px -407px; }
+.imgConnected.automation { background-position: -188px -407px; }
+.imgConnected.evolution { background-position: -279px -407px; }
+
+
+
+
+/* results */
+.results-playlist {
+    margin: 0 0 3rem;
+    position: relative;
+}
+.results-playlist-main iframe {
+    width: 100%;
+    height: 200px;
+    background: #fff;
+}
+.results-playlist-vids {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.res-link {
+    width: 124px;
+    display: inline-block;
+    background: #fff;
+	padding: .6rem;
+    box-sizing: border-box;
+    color: #000;
+}
+.res-link.active {
+    background: #0047ab;
+    color: #fff;
+}
+.res-info {
+    position: relative;
+}
+.res-info b {
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    width: 100%;
+    display: block;
+    margin: 6px 0;
+}
+.res-info .res-rate {
+    width: 100%;
+    height: 20px;
+    display: block;
+    position: relative;
+    margin-top: 4px;
+}
+.res-info .exc-rate {
+    right: auto;
+    top: 0;
+    left: 0;
+}
+.res-info .res-level {
+    width: 100%;
+    font-size: 10px;
+    margin-top: 4px;
+}
+.results-featured {
+	list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(35px, auto);
+    grid-gap: 1rem;
+    justify-items: stretch;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+.results-featured li {
+	list-style: none;;
+}
+.imgFeatured {
+	background: url(img/apex-seller-sprite.png) no-repeat -210px -12px;
+    width: 132px;
+    height: 30px;
+	display: block;
+	margin: 0 auto;
+}
+.imgFeatured.forbes { background-position: -136px -78px; width: 106px;}
+.imgFeatured.huffpost { background-position: -154px -42px; width: 184px;}
+.imgFeatured.bbc { background-position: -240px -78px; width: 104px;}
+a.see-reviews {
+	text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* curiculum */
+.curriculum-contents {
+	margin-bottom: 2rem;
+}
+.curriculum-toggle {
+    cursor: pointer;
+    color: #0047ab;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: #efefef;
+    display: inline-block;
+}
+.curriculum a {
+    padding: 16px;
+    background: #efefef;
+    display: block;
+    margin-bottom: 2px;
+}
+.curriculum-menu.active > a {
+    background: #0047ab;
+    color: #ffffff;
+}
+.cur-modules,
+.cur-time,
+.cur-submen {
+    display: none;
+}
+.cur-submen .cur-modules {
+    margin: 0;
+}
+.cur-submen.active {
+    display:block;
+}
+.cur-submen-items .cur-submen-title {
+    padding: 12px 16px;
+    background: #f5f5f5;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+}
+.cur-submen-items .cur-submen {
+    padding: 1px 20px;
+    background: #fbfbfb;
+    font-size: 13px;
+}
+span.curMod,
+span.curTme {
+    display:none;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+
+
+
+/* curriculum icons */
+.curriculum-menu a .dashicons {
+    position: relative;
+    top: 2px;
+    margin-right: 8px;
+}
+.curriculum-menu a .dashicons:before { content: "\f132"; }
+.curriculum-menu.active a .dashicons:before { content: "\f460"; }
+.dashicons.cur-vid,
+.dashicons.cur-action,
+.dashicons.cur-question {
+    font-size: 18px;
+    color: #0047ab;
+    margin-right: 10px;
+}
+.dashicons.cur-vid:before { content: "\f236"; }
+.dashicons.cur-toggle {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.dashicons.cur-toggle:before { content: "\f140"; }
+.dashicons.cur-toggle.active:before { content: "\f142"; }
+.dashicons.cur-action:before { content: "\f12a"; }
+.dashicons.cur-question:before { content: "\f348"; }
+
+
+
+
+/* components */
+.imgComponents {
+	background: url(img/apex-seller-sprite.png) no-repeat -388px 2px;
+    width: 330px;
+    height: 240px;
+	display: block;
+	margin: 0 auto;
+}
+.imgComponents.documents {
+	background-position: -1068px -1px;
+	width: 338px;
+	height: 262px;
+}
+.imgComponents.qanda {
+	background-position: -376px -236px;
+	width: 400px;
+	height: 266px;
+}
+.imgComponents.community {
+	background-position: -801px -269px;
+    width: 324px;
+    height: 252px;
+}
+.imgComponents.software {
+	background-position: -728px -8px;
+	width: 318px;
+	height: 220px;
+}
+.component-icons {
+	max-width: 980px;
+    margin: 0 auto;
+}
+.component-icons figure {
+	margin-bottom: 3.2rem;
+}
+.component-icons figure.for-desktop {
+	display: none;
+}
+.component-icons figcaption b {
+	display: block;
+	font-size: 1.8rem;
+	margin: 1.5rem 0 .5rem;
+}
+
+
+
+/* requirements */
+.requirements ul {
+	list-style: none;
+	padding: 0;
+}
+.requirements ul li {
+	list-style: none;
+	background: #efefef;
+	padding: 2rem;
+	margin-bottom: 3rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.requirements .apex-graphics-icons {
+	margin: 2rem 0 1rem;
+}
+.requirements b {
+	display: block;
+	margin: 0 0 .5rem;
+}
+.requirements h5 {
+	margin: 0 0 2rem;
+}
+.requirements a.button {
+	display: block;
+    text-align: center;
+}
+
+
+
+
+/* overview */
+.overview .apex-side-wrap {
+	background: #fff;
+}
+
+
+
+
+/* get started */
+.get-started {
+	background: #d5d5d5;
+	padding: 3rem 20px 6rem;
+}
+.get-started a.button {
+	display: block;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
 
 
 /*------------------------*\
+
 	Terms & Privacy Page    
+
 \*------------------------*/ 
+
+
+
 .terms-privacy-container .wrap {
 	max-width: 1030px;
 }
@@ -1240,9 +1726,16 @@ a.close-menu {
 
 
 
+
+
+
+
+
 /*------------------------------------*\
-    RESPONSIVE
+	RESPONSIVE
 \*------------------------------------*/
+
+
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dppx) {
 
@@ -1256,12 +1749,147 @@ a.close-menu {
 /* Extra Small Devices, Phones */ 
 @media (min-width : 480px) {
 
+	/* apex-page main */
+	.apex-side-wrap ul {
+		font-size: 1.4rem;
+	}
+
+
+	/* apex page - results */
+	.results-playlist-main iframe {
+        height: 300px;
+    }
 
 
 }
 
-/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */ 
+@media (min-width : 550px) {
 
+
+	/* apex page - graphic icons */
+	.apex-graphics-icons {
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+
+}
+
+
+@media (min-width: 690px) {
+
+	/* apex-page main */
+	.apex-section-description {
+		font-size: 2rem;
+		max-width: 790px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	
+	
+	/* apex-page - complete connected */
+	.complete-connected-icons {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
+		justify-items: center;
+		align-items: center;
+		font-size: 1.4rem;
+		margin-bottom: 4rem;
+	}
+	.complete-connected figure {
+		grid-auto-rows: minmax(170px, auto);
+		padding: 0 1.2rem;
+		background: #efefef;
+		justify-items: center;
+		align-items: center;
+		margin: 0;
+	}
+
+
+	/* apex-page - curiculum */
+	.curriculum-contents {
+		margin-bottom: 4rem;
+	}
+    .cur-time {
+        float: right;
+        display: block;
+    }
+    span.curTme { 
+        float: right;
+        margin-right: 14px;
+        display: block;
+	}
+
+
+	/* apex-page - results */
+    .results-playlist-main {
+        width: 75%;
+        float: left;
+    }
+    .results-playlist-main iframe {
+        height: 300px;
+    }
+    .results-playlist-vids {
+        padding-left: 10px;
+		box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 25%;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .res-link {
+        width: 100%;
+		display: block;
+		margin-bottom: 10px;
+		padding: 1rem;
+		text-align: left;
+	}
+	.results-featured {
+		grid-template-columns: repeat(4, 1fr);
+		max-width: 780px;
+		margin: 0 auto 3rem;
+	}
+
+
+
+	/* apex-page - program-components */
+	.component-icons figure {
+		grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		grid-gap: 1.5rem;
+		align-items: center;
+		align-content: center;
+		text-align: left;
+	}
+	.component-icons figure.for-desktop {
+		display: grid;
+		text-align: right;
+	}
+	.component-icons figure.for-mobile {
+		display: none;
+	}
+
+
+	/* apex-page - requirements */
+	.requirements .apex-graphics-icons {
+		grid-template-columns: 1fr;
+	}
+	.requirements ul {
+		grid-template-columns: repeat(3, 1fr);
+		display: grid;
+		grid-gap: 1.5rem;
+	}
+
+}
+
+
+/* Small Devices, Tablets */
 @media (min-width: 768px) {
 
 	body { font-size: 16px; }
@@ -1374,15 +2002,11 @@ a.close-menu {
 	.home-feature-graph p {
 		font-size: 2.9rem;
 	}
-
-
-	
 	.home-features {
 		min-height: 50vh;
 		display: flex;
 		align-items: center;
 	}
-
 	.home-features figure {
 		width: 50%;
 		padding: 0;
@@ -1398,17 +2022,17 @@ a.close-menu {
 	.home-features-title .wrap p {
 	    font-size: 1.9rem;
 	}
-
-
 	.home-features-title.the-story .wrap {
 	    padding: 10rem 0;
 	}
+	
 
 
 	/*story */
 	body.page-id-23 main.container {
 	    margin-top: 96px;
 	}
+
 
 	/*results*/
 	body.page-template-template-results .default-container .wrap {
@@ -1426,10 +2050,8 @@ a.close-menu {
 		width: 49%;
 		margin-bottom: 10px;
 	}
-
-
-
 	
+
 
 	/*blog*/
 	main.container {
@@ -1470,7 +2092,6 @@ a.close-menu {
 
 
 	/*terms and privacy*/
-	
 	.terms-privacy-container {
 		margin-top: 64px;
 		min-height: 400px;
@@ -1496,8 +2117,66 @@ a.close-menu {
 	.contact-container {
 		margin-bottom: 70px;
 	}
-    
 
+
+
+    /* apex-page - main */
+	.apex-program-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: minmax(200px, auto);
+		grid-gap: 0;
+		justify-items: center;
+		align-items: center;
+		margin-bottom: 3rem;
+	}
+
+
+	/* apex-page graphic icons */
+	.apex-graphics .wrap {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		max-width: 1000px;
+		grid-gap: 1.5rem;
+	}
+	.apex-graphics-icons {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: minmax(70px, auto);
+		grid-gap: 1.5rem;
+		justify-items: stretch;
+		align-items: stretch;
+		margin-bottom: 0;
+		text-align: center;
+	}
+	.apex-graphics-icons figure {
+		margin: 0;
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		text-align: left;
+		grid-gap: 1.5rem;
+		align-items: center;
+	}
+
+
+	/* apex-page - curiculum */
+    .cur-modules {
+        float: right;
+        margin-right: 50px;
+        display: block;
+    }
+    span.curMod {
+        float: right;
+        margin-right: 38px;
+        display: block;
+	}
+	
+
+
+	/* apex-page - results  */
+    .results-playlist-main iframe {
+        height: 330px;
+	}
 
 }
 
@@ -1523,7 +2202,6 @@ a.close-menu {
 	.default-container section {
 	    width: 70%;
 	}
-
 	.blogpost-container aside,
 	.default-container aside{
 	    width: 30%;
@@ -1531,6 +2209,53 @@ a.close-menu {
 	.metrics {
 	    right: auto;
 	}
+
+
+	/* apex-page - main */
+	.apex-side-wrap {
+		font-size: 1.6rem;
+		padding: 4rem;
+	}
+	.apex-side-wrap h1 {
+		font-size: 5.5rem;
+		margin: 0 0 2rem;
+	}
+	.apex-side-wrap .ratings {
+		margin-bottom: 1.4rem;
+	}
+	.apex-side-wrap .last-updated {
+		font-size: 1.4rem;
+	}
+	.apex-side-wrap ul {
+		margin: 2.5rem 0;
+		font-size: 1.6rem;
+	}
+	.apex-side-wrap .button {
+		font-size: 2.5rem;
+	}
+	.apex-program-content {
+		display: grid;
+		grid-template-columns: auto 458px;
+	}
+	.apex-section-title {
+		max-width: 960px;
+		display: block;
+		margin: 4rem auto;
+	}
+
+
+
+
+	/* apex-page - comeplete connected */
+	.complete-connected-icons {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+
+	/* apex-page - results */
+    .results-playlist-main iframe {
+        height: 400px;
+    }
 
 
 }
@@ -1541,7 +2266,6 @@ a.close-menu {
 	.metrics {
 	    width: 100%;
 	}
-
 	.blogpost-container .metrics {
 	    margin-left: 20px;
 	}
@@ -1551,6 +2275,12 @@ a.close-menu {
 	.contact-container-header {
 		height: 350px;
 	}
+
+
+	/* apex-page main */
+	.results-playlist-main iframe {
+        height: 492px;
+    }
 
 }
 
@@ -1619,7 +2349,6 @@ a.close-menu {
 .icon-checkbox-checked:before {content: "\e909";}
 .icon-checkbox-unchecked:before {content: "\e90a";}
 .icon-mail4:before {content: "\e906";}
-
 
 
 .stat-info [class^="icon-"], 
