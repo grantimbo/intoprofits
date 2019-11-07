@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.9.2
+	Version: 4.9.3
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -392,7 +392,7 @@ ul#menu-footer-menu a {
 }
 .metrics h4 {
 	margin: 0 0 16px;
-	font-size: 1.6em;
+	font-size: 1.5em;
 	line-height: 3rem;
 }
 .metrics .button {
@@ -566,6 +566,7 @@ a.btn-seehow:hover span {
 }
 body.single.single-post .container article {
 	padding-top: 20px;
+	line-height: 2rem;
 }
 .article-content:first-child{
 	padding-top: 20px;
@@ -767,9 +768,12 @@ a.transcript-readmore {
 }
 .reviews-head {
 	text-align: center;
-	position: relative;
-	padding: 60px 40px;
-	border-bottom: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
 	background: #fff;
 	background: -moz-linear-gradient(top, #fff 0%, #f6f6f6 47%, #ededed 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
@@ -977,6 +981,7 @@ a.transcript-readmore {
     max-width: 340px;
 	margin: 0 auto;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 .revFoot > p {
     font-size: 13px;
@@ -1020,9 +1025,6 @@ a.transcript-readmore {
 
 
 @media (min-width: 768px) {
-	.reviews-head {
-		padding: 100px 20px;
-	}
 	.reviews-head:after {
 		background-size: 130%;
 	}
@@ -1119,9 +1121,6 @@ a.transcript-readmore {
 @media (min-width : 1180px) {
 	.result-count {
 		padding: 0 24px;
-	}
-	.reviews-head {
-		padding: 130px 20px;
 	}
 	.reviews-head:after {
 		background-size: contain;
@@ -2049,7 +2048,7 @@ a.close-menu {
 
 	/*home page*/
 	.home-feature-graph {
-	    height: 93vh;
+	    height: 84vh;
 	    padding: 2.5rem;
 	}
 	.home-feature-graph .wrap {
