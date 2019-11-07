@@ -26,7 +26,7 @@ Template Post Type: programs
 					<li>Hire and manage a world-class team</li>
 					<li>Scale into 7&#8209;figure profits</li>
 				</ul>
-				<a href="<?php echo site_url(); ?>/apply" class="button">APPLY NOW</a>     
+				<a href="<?php echo site_url(); ?>/apply" class="button">APPLY NOW</a> 
 				<p class="info"><b>Got a team? No problem!</b>Give access to specific workflows, tools and training to hand-off the work.</p>
 			</div>
 		</div>
@@ -178,7 +178,7 @@ Template Post Type: programs
 		
 				if($wp_query->have_posts()) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 		
-				<a class="res-link"
+				<a class="res-link" title="<?php the_field('review_name'); ?>"
 					data-video='<?php the_field('review_video'); ?>'
 					href="<?php the_permalink(); ?>">
 					<img src="<?php the_field('review_screenshot'); ?>">

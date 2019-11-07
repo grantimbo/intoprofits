@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.9.1
+	Version: 4.9.2
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -342,7 +342,7 @@ body.admin-bar .mobile-menu-wrap {
 /* footer */
 footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 1.4rem;
     padding: 50px 0;
 }
 
@@ -1157,7 +1157,7 @@ img.programs-apex-graphic {
 .programs-apex-seller-wrap {
 	font-size: 1.6rem;
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
     box-sizing: border-box;
     background: #efefef;
 }
@@ -1209,8 +1209,10 @@ img.programs-apex-graphic {
 
 
 .apex-section {
-	padding: 20px;
 	overflow: hidden;
+	font-size: 1.6rem;
+	overflow: hidden;
+    padding: 20px;
 }
 .apex-graphics,
 .student-results,
@@ -1225,11 +1227,15 @@ img.programs-apex-graphic {
 .get-started {
 	text-align: center;
 }
+.apex-section-title {
+	font-size: 2.5rem;
+}
 .apex-section-title.withSub {
 	margin-bottom: .5rem;
 }
 .apex-section-description {
 	margin: 0 0 3rem;
+	font-size: 1.8rem;
 }
 
 
@@ -1237,7 +1243,7 @@ img.programs-apex-graphic {
 .apex-side-wrap {
 	background: #efefef;
 	padding: 20px;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 }
 img.apex-program-graphic {
 	margin: 3rem auto;
@@ -1248,7 +1254,7 @@ img.apex-program-graphic {
     margin: 0 0 1.2rem;
 }
 .apex-side-wrap .ratings {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.3rem;
 }
 .apex-side-wrap .ratings .exc-rate {
 	position: relative;
@@ -1260,7 +1266,7 @@ img.apex-program-graphic {
 .apex-side-wrap .ratings a.see-results {
 	position: relative;
     top: -6px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: underline;
     text-underline-position: under;
 }
@@ -1274,7 +1280,7 @@ img.apex-program-graphic {
 	line-height: 3rem;
 	margin: 2rem 0;
 	padding: 0;
-	font-size: 1.3rem;
+	font-size: 1.35rem;
 }
 .apex-side-wrap ul li:before {
 	content: "";
@@ -1328,7 +1334,7 @@ img.apex-program-graphic {
 .apex-icon.access { background-position-x: -297px; }
 .apex-graphics-icons b {
 	display: block;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .apex-what-who-why {
 	margin: 2rem 0;
@@ -1346,13 +1352,12 @@ img.apex-program-graphic {
 
 /* complete and connected */
 .complete-connected figure {
-	display:grid;
-	grid-template-columns:1fr 3fr;
-	grid-auto-rows:minmax(100px, auto);
-	grid-gap:1rem;
-	justify-items:stretch;
-	align-items:stretch;
-	margin-bottom: 3rem;
+	display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
 }
 .complete-connected b {
 	display: block;
@@ -1413,7 +1418,7 @@ img.apex-program-graphic {
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
-    font-size: 12px;
+    font-size: 1.4rem;
     width: 100%;
     display: block;
     margin: 6px 0;
@@ -1432,7 +1437,7 @@ img.apex-program-graphic {
 }
 .res-info .res-level {
     width: 100%;
-    font-size: 10px;
+    font-size: 1.3rem;
     margin-top: 4px;
 }
 .results-featured {
@@ -1476,7 +1481,7 @@ a.see-reviews {
     cursor: pointer;
     color: #0047ab;
     padding: 10px 20px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 10px;
     background: #efefef;
@@ -1493,7 +1498,6 @@ a.see-reviews {
     color: #ffffff;
 }
 .cur-modules,
-.cur-time,
 .cur-submen {
     display: none;
 }
@@ -1506,23 +1510,28 @@ a.see-reviews {
 .cur-submen-items .cur-submen-title {
     padding: 12px 16px;
     background: #f5f5f5;
-    font-size: 14px;
     display: block;
     margin-bottom: 2px;
 }
 .cur-submen-items .cur-submen {
     padding: 1px 20px;
     background: #fbfbfb;
-    font-size: 13px;
+    font-size: 1.4rem;
 }
-span.curMod,
-span.curTme {
-    display:none;
-    margin-top: 18px;
-    font-weight: bold;
+span.curTme,
+span.curMod {
+	margin-right: 8px;
+	font-weight: bold;
+	float: right;
 }
-
-
+span.curMod {
+	margin-right: 38px;
+	display: none;
+}
+.cur-time {
+	float: right;
+	display: block;
+}
 
 
 /* curriculum icons */
@@ -1626,6 +1635,9 @@ span.curTme {
 .requirements a.button {
 	display: block;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 
@@ -1806,7 +1818,10 @@ a.close-menu {
 
 	/* apex-page main */
 	.apex-side-wrap ul {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
+	}
+	.apex-side-wrap {
+		font-size: 1.6rem;
 	}
 
 
@@ -1833,6 +1848,8 @@ a.close-menu {
 
 @media (min-width: 690px) {
 
+	
+
 
 	/* apex-page main */
 	.apex-section-description {
@@ -1851,12 +1868,10 @@ a.close-menu {
 		grid-gap: 2rem;
 		justify-items: center;
 		align-items: center;
-		font-size: 1.4rem;
 		margin-bottom: 4rem;
 	}
 	.complete-connected figure {
-		grid-auto-rows: minmax(170px, auto);
-		padding: 0 1.2rem;
+		padding: 2rem;
 		background: #efefef;
 		justify-items: center;
 		align-items: center;
@@ -1868,18 +1883,16 @@ a.close-menu {
 	.curriculum-contents {
 		margin-bottom: 4rem;
 	}
-    .cur-time {
-        float: right;
-        display: block;
-    }
-    span.curTme { 
-        float: right;
-        margin-right: 14px;
-        display: block;
+	.cur-submen-items .cur-submen {
+		font-size: 1.6rem;
 	}
+    
 
 
 	/* apex-page - results */
+	.student-results {
+		font-size: 1.8rem;
+	}
     .results-playlist-main {
         width: 75%;
         float: left;
@@ -1940,6 +1953,13 @@ a.close-menu {
 		grid-template-columns: repeat(3, 1fr);
 		display: grid;
 		grid-gap: 1.5rem;
+	}
+
+
+	/* apex-page - get started */
+	.get-started.apex-section {
+		padding: 60px 20px 80px;
+		font-size: 2rem;
 	}
 
 }
@@ -2180,21 +2200,19 @@ a.close-menu {
 	.programs-container {
 		font-size: 2rem;
 	}
+	.programs-container .wrap {
+		text-align: center;
+		margin: 8rem auto;
+		max-width: 800px;
+	}
 	.programs-head h1 {
 		font-size: 3.5rem;
 	}
-
 	.programs-apex-seller-wrap {
 		font-size: 2rem;
 	}
 	.programs-apex-seller-wrap h1 {
 		font-size: 3.5rem;
-	}
-	
-	.programs-container .wrap {
-		text-align: center;
-		margin: 8rem auto;
-		max-width: 800px;
 	}
 	.programs-apex-seller-wrap .wrap {
 		display: grid;
@@ -2207,10 +2225,26 @@ a.close-menu {
 	}
 
 
+	/* apex page */
+	.apex-section {
+		padding: 50px 20px;
+	}
+	.apex-section-title {
+		font-size: 3.5rem;
+	}
+	.apex-section-title.withSub {
+		margin-bottom: 1.6rem;
+	}
+	.apex-section-description {
+		font-size: 2.2rem;
+		margin-bottom: 5rem;
+	}
+
+
     /* apex-page - main */
 	.apex-program-content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: auto 390px;
 		grid-auto-rows: minmax(200px, auto);
 		grid-gap: 0;
 		justify-items: center;
@@ -2264,6 +2298,12 @@ a.close-menu {
     .results-playlist-main iframe {
         height: 330px;
 	}
+	.res-info b {
+		font-size: 1.6rem;
+	}
+	.res-info .res-level {
+		font-size: 1.4rem;
+	}
 
 }
 
@@ -2300,7 +2340,6 @@ a.close-menu {
 
 	/* apex-page - main */
 	.apex-side-wrap {
-		font-size: 1.6rem;
 		padding: 4rem;
 	}
 	.apex-side-wrap h1 {
@@ -2315,21 +2354,20 @@ a.close-menu {
 	}
 	.apex-side-wrap ul {
 		margin: 2.5rem 0;
-		font-size: 1.6rem;
 	}
 	.apex-side-wrap .button {
 		font-size: 2.5rem;
 	}
 	.apex-program-content {
 		display: grid;
-		grid-template-columns: auto 458px;
+		grid-template-columns: auto 460px;
 	}
 	.apex-section-title {
 		max-width: 960px;
 		display: block;
-		margin: 4rem auto;
+		margin: 4rem auto 6rem;
+		
 	}
-
 
 
 
@@ -2337,12 +2375,24 @@ a.close-menu {
 	.complete-connected-icons {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+	.complete-connected figure {
+		grid-auto-rows: minmax(240px, auto);
+	}
 
 
 	/* apex-page - results */
     .results-playlist-main iframe {
         height: 400px;
-    }
+	}
+	
+
+	/* apex-page - components */
+	.program-components {
+		font-size: 1.8rem;
+	}
+	.component-icons figcaption b {
+		font-size: 2rem;
+	}
 
 
 }
@@ -2367,7 +2417,13 @@ a.close-menu {
 	/* apex-page main */
 	.results-playlist-main iframe {
         height: 492px;
-    }
+	}
+	
+
+	/* apex-page connected */
+	.complete-connected figure {
+		grid-auto-rows: minmax(180px, auto);
+	}
 
 }
 

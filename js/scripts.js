@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.12.0
+// Version : 2.12.1
 // Description : Custom Script for audunsson.com
 // ---------------------------
 
@@ -186,7 +186,7 @@ $(function() {
 	lastUpdated = function() {
 
 		const m = new Date();
-		m.setDate(m.getDate()-1);
+		m.setDate(m.getDate()-2);
 
 		var dateString =  ("0" + (m.getUTCMonth()+1)).slice(-2) + "/" +  ("0" + m.getUTCDate()).slice(-2) + "/" + m.getUTCFullYear();
 
