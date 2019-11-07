@@ -187,11 +187,8 @@ $(function() {
 		$(document).on('click', '.curriculum-menu a', function (e) {
 			e.preventDefault();
 
-			console.log('tae')
-
 			$(this).siblings('div').toggleClass('active')
 			$(this).closest('div').toggleClass('active')
-
 
 		})
 

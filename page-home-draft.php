@@ -20,7 +20,9 @@
     </div>
 </section>
 
-<section class="apex-section pro-grade" style="background: #efefef; text-align: center;">
+
+
+<section class="apex-section pro-grade">
     <div class="wrap">
         <h1 class="apex-section-title withSub">Professional Grade Private Label Systems</h1>
         <p class="apex-section-description">IntoProfits.com provides proprietary tools and processes that put you in the top 1% of sellers. It’s like upgrading your business from a streetcar into an F1 car on a racetrack.</p>
@@ -100,7 +102,6 @@
 </div>
 
 
-
 <div class="apex-section student-results">
 	<div class="wrap">
 	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
@@ -152,31 +153,33 @@
 </div>
 
 
-<section class="home-features-title gray-bg the-story">
+<section class="apex-section cutting-edge-program">
     <div class="wrap">
-        <h1>Cutting-Edge Programs</h1>
-        <p>We teach the things that no-one else is teaching. All of our programs are built from the ground-up with our own proprietary systems and processes. They are NEW, innovative and give our students a true competitive advantage.</p>
+        <h1 class="apex-section-title withSub">Cutting-Edge Programs</h1>
+        <p class="apex-section-description">We teach the things that no-one else is teaching. All of our programs are built from the ground-up with our own proprietary systems and processes. They are NEW, innovative and give our students a true competitive advantage.</p>
+
+        <div class="apex-seller-graphic-home programs-apex-seller-wrap">
+
+            <div class="wrap">
+                <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
+                <div class="programs-apex-graphic">
+                    <h1>Apex Seller™</h1>
+                    <b>Stage: Scaling Up <span class="scaleProgbar"></span></b>
+                    <p>How to scale into 7- and 8-figures by leveraging professional grade systems & data, full-scale PPC advertising, unique products and a world-class team.</p>
+                    <a href="<?php echo site_url(); ?>/programs/apex-seller" class="button">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+
+        
+    
     </div>
 </section>
 
 
-<section class="programs-apex-seller-wrap">
-	<div class="wrap">
 
-        <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
-        <div class="programs-apex-graphic">
-            <h1>Apex Seller™</h1>
-            <b>Stage: Scaling Up <span class="scaleProgbar"></span></b>
-            <p>How to scale into 7- and 8-figures by leveraging professional grade systems & data, full-scale PPC advertising, unique products and a world-class team.</p>
-            <a href="<?php echo site_url(); ?>/programs/apex-seller" class="button">Learn More</a>
-        </div>
-
-	</div>
-</section>
-
-
-
-<section class="home-features-title gray-bg the-story">
+<section class="apex-seller-overwhelmed">
     <div class="wrap">
         <p>Stop Being Stuck & Overwhelmed...</p> 
         <h1>Get Hyper-Systemized and Predictably Scale Into 7‑ and 8‑Figures</h1>
