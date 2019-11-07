@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.12.1
+// Version : 2.12.2
 // Description : Custom Script for audunsson.com
 // ---------------------------
 
@@ -39,8 +39,19 @@ $(function() {
 
 			$(".desktop-menu-wrap a:contains('Student Results')").closest('li').addClass('active')
 			$(".desktop-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
-
 		}
+
+
+		if ($('body').hasClass('post-type-archive-programs') || $('body').hasClass('single-programs')) {
+
+			$(".mobile-menu-wrap a:contains('Programs')").closest('li').addClass('active')
+			$(".mobile-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
+
+			$(".desktop-menu-wrap a:contains('Programs')").closest('li').addClass('active')
+			$(".desktop-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
+		}
+
+
 	},
 
 
@@ -102,6 +113,7 @@ $(function() {
 
 	},
 
+
 	metricScroll = function() {
 		
 		$(window).scroll(function (e) {
@@ -125,47 +137,37 @@ $(function() {
 
 	reviewsVideoPlayer = function() {
 
-		var firstVid = $('.res-link:first-child')[0].dataset.video
+		// check if the class exist
+		if ( $('.results-playlist-main').length ) {
 
-		$('a.res-link:first-child').addClass('active')
-		$('.results-playlist-main').html(firstVid)
+			var firstVid = $('.res-link:first-child')[0].dataset.video
 
+			$('a.res-link:first-child').addClass('active')
+			$('.results-playlist-main').html(firstVid)
 
+			// video playlist link
+			$(document).on('click', '.results-playlist-vids .res-link', function (e) {
+				e.preventDefault();
+
+				let video = this.getAttribute('data-video');
+
+				$('.results-playlist-main').html(video)
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+			
+		}
+
+	},
+
+	
+	curriculum = function() {
+
+		// add active first child
 		$('.curriculum-contents .curriculum-menu:first-child').addClass('active').children('.cur-submen').addClass('active')
 
 
-		// video playlist link
-		$(document).on('click', '.results-playlist-vids .res-link', function(e) {
-			e.preventDefault();
-
-			let video = this.getAttribute('data-video');
-
-			$('.results-playlist-main').html(video)
-			$(this).addClass('active').siblings().removeClass('active')
-		})
-
-		// accordion modules
-		$(document).on('click', '.curriculum-menu a', function(e) {
-			e.preventDefault();
-
-			console.log('tae')
-
-			$(this).siblings('div').toggleClass('active')
-			$(this).closest('div').toggleClass('active')
-
-
-		})
-
-		// accordion modules sub menu
-		$(document).on('click', 'span.cur-toggle', function(e) {
-			e.preventDefault();
-
-			console.log($(this).toggleClass('active').closest('.cur-submen-title').siblings('.cur-submen').toggleClass('active'))
-
-		})
-
 		// toggle - collapse all 
-		$(document).on('click', '.curriculum-toggle', function(e) {
+		$(document).on('click', '.curriculum-toggle', function (e) {
 			e.preventDefault();
 
 			if ($(this).html() == 'Expand All') {
@@ -180,6 +182,27 @@ $(function() {
 				$('.cur-submen-items').removeClass('active')
 			}
 		})
+
+		// accordion modules
+		$(document).on('click', '.curriculum-menu a', function (e) {
+			e.preventDefault();
+
+			console.log('tae')
+
+			$(this).siblings('div').toggleClass('active')
+			$(this).closest('div').toggleClass('active')
+
+
+		})
+
+		// accordion modules sub menu
+		$(document).on('click', 'span.cur-toggle', function (e) {
+			e.preventDefault();
+
+			console.log($(this).toggleClass('active').closest('.cur-submen-title').siblings('.cur-submen').toggleClass('active'))
+
+		})
+
 	},
 
 
@@ -205,6 +228,7 @@ $(function() {
 	openReview();
 	metricScroll();
 	reviewsVideoPlayer();
+	curriculum();
 	lastUpdated();
 
 	console.log('-------------------------------');

@@ -84,7 +84,7 @@ function intoprofits_header_scripts() {
         wp_register_script('modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('intoprofitScripts', get_template_directory_uri() . '/js/scripts.js', array(), '2.12.1'); // Site Functionalities
+        wp_register_script('intoprofitScripts', get_template_directory_uri() . '/js/scripts.js', array(), '2.12.2'); // Site Functionalities
         wp_enqueue_script('intoprofitScripts'); // Enqueue it!
 
     }

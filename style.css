@@ -220,8 +220,8 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
 
 /* header */
 .header {
-	height: 24px;
-    padding: 20px 0;
+	height: 64px;
+    padding: 0;
     background: #efefef;
     text-align: center;
     position: fixed;
@@ -236,7 +236,8 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
     line-height: 24px;
     color: #FFF;
     display: inline-block;
-    max-width: 200px;
+	max-width: 200px;
+	margin: 20px 0;
 }
 
 
@@ -327,15 +328,38 @@ body.admin-bar .mobile-menu-wrap {
 
 .desktop-menu-wrap .nav li:hover a {
 	color: #0047ab;
+	background: #fff;
 }
 .desktop-menu-wrap .nav a {
-	padding: 10px 12px;
+	display: block;
+    padding: 20px 12px;
 	color: #000;
 	font-size: 14px;
 	-webkit-transition: all .4s ease;
 	-o-transition: all .4s ease;
 	transition: all .4s ease;
 }
+
+.desktop-menu-wrap .nav ul.sub-menu {
+	position: absolute;
+	top: 64px;
+	left: 0;
+	display: none;
+}
+.desktop-menu-wrap .nav li:hover a + ul.sub-menu {
+	display: block;
+}
+.desktop-menu-wrap .nav ul.sub-menu li a {
+	background: #0047ab;
+    color: #fff;
+    width: 140px;
+    padding: 14px;
+}
+.desktop-menu-wrap .nav ul.sub-menu li a:hover {
+	background: #1361ce;
+    color: #fff;
+}
+
 
 
 
