@@ -352,7 +352,7 @@ Template Post Type: programs
 				<h5>Entry Requirements</h5>
 				<p><b>1. Experience</b>You must be in business and making daily sales on Amazon</p>
 				<p><b>2. Business type </b>You must be selling your own private label / branded products</p>
-				<p><b>3. Commitment</b>You must be 100% committed to your business and scaling up</p>
+				<p><b>3. Commitment</b>You must be 100% committed to your business and willing to do the work</p>
 			</li>
 			
 			

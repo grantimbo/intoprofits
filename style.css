@@ -286,7 +286,7 @@ body.admin-bar .mobile-menu-wrap {
 }
 .mobile-menu-wrap .nav li.active a {
 	background: #101010;
-    color: #0047ab;
+    color: #6d6d6d;
 }
 .mobile-menu-wrap .nav li:last-child a {
 	border-bottom: 1px solid #292929;
