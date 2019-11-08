@@ -32,7 +32,7 @@
 </section>
 
 
-<div class="apex-section complete-connected">
+<section class="apex-section complete-connected">
 	<div class="wrap">
 		<h1 class="apex-section-title withSub">Complete & Connected</h1>
 		<p class="apex-section-description">Forged in fire, our systems have evolved through continuous application since 2012. Most programs teach you siloed tactics but in the real-world everything is connected. And it’s the correct combination of every component that produces stunning results.</p>
@@ -99,10 +99,10 @@
 			</figure>
 		</section>
 	</div>
-</div>
+</section>
 
 
-<div class="apex-section student-results">
+<section class="apex-section student-results">
 	<div class="wrap">
 	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
 	    <p class="apex-section-description">Does Apex Seller actually work? There is only one way to find out; by asking our students about their results with it in the real-world.</p>
@@ -150,7 +150,7 @@
         <a href="<?php echo site_url(); ?>/results" class="see-reviews">See more of our student success stories</a>
 
 	</div>
-</div>
+</section>
 
 
 <section class="apex-section cutting-edge-program">

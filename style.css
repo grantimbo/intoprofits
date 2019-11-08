@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.10.2
+	Version: 4.11.0
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -361,7 +361,9 @@ body.admin-bar .mobile-menu-wrap {
 	background: #1361ce;
     color: #fff;
 }
-
+.mobile-menu-wrap .nav ul.sub-menu li:last-child a {
+	border-bottom: 0;
+}
 
 
 
@@ -523,64 +525,6 @@ a.btn-seehow:hover span {
 	color: #0047ab;
 }
 
-.home-features-title {
-	padding: 1.4rem;
-}
-.home-features-title .wrap  {
-	max-width: 960px;
-	text-align: center;
-	padding: 4rem 0;
-}
-.home-features-title.gray-bg {
-	background: #f9f9f9
-}
-.home-features-title .wrap h1 {
-	font-size: 2.4rem;
-}
-.home-features-title .wrap p {
-	font-size: 1.6rem;
-}
-
-
-.home-features {
-	background: #f9f9f9;
-	padding: 12px;
-	align-items: center;
-}
-.home-features article {
-    width: 65%;
-	float: left;
-}
-.home-features figure {
-	width: 35%;
-    float: right;
-    padding: 50px 10px 10px;
-    box-sizing: border-box;
-}
-.home-features.even {
-	background: #fff;
-}
-.home-features.even article {
-	float: right;
-}
-
-.home-features-title.the-story {
-	background: #f9f9f9 url(img/the-story-bg.jpg) no-repeat center bottom;
-    border-top: 1px solid #e0e0e0;
-    background-size: contain;
-}
-.home-features-title.the-story .wrap {
-	padding: 2rem 0;
-}
-.home-features-title.free-consultation {
-    border-top: 1px solid #e0e0e0;
-}
-.home-features-title.free-consultation .wrap {
-	padding: 8rem 0;
-}
-
-
-
 
 
 /* home page - pro grade */
@@ -593,10 +537,11 @@ a.btn-seehow:hover span {
 .apex-seller-graphic-home img {
     max-width: 450px;
     display: block;
-    margin: 0 auto;
+	margin: 0 auto;
+	width: 100%;
 }
 
-/* home - overwhelmed */
+/* home page- overwhelmed */
 .apex-seller-overwhelmed {
     background: #ba3631 url(img/overwhelmed-bg.jpg) center 30%;
     text-align: center;
@@ -609,9 +554,9 @@ a.btn-seehow:hover span {
     margin: 0;
 }
 .apex-seller-overwhelmed h1 {
+    font-size: 3rem;
     max-width: 740px;
     margin: 1rem auto 30px;
-    font-size: 4rem;
 }
 .apex-seller-overwhelmed a.button {
     font-weight: bold;
@@ -2148,28 +2093,10 @@ a.close-menu {
 	.home-feature-graph p {
 		font-size: 2.9rem;
 	}
-	.home-features {
-		min-height: 50vh;
-		display: flex;
-		align-items: center;
-	}
-	.home-features figure {
-		width: 50%;
-		padding: 0;
-		box-sizing: unset;
-		text-align: center;
-	}
-	.home-features article {
-		width: 50%;
-	}
-	.home-features-title .wrap h1 {
-	    font-size: 3.4rem;
-	}
-	.home-features-title .wrap p {
-	    font-size: 1.9rem;
-	}
-	.home-features-title.the-story .wrap {
-	    padding: 10rem 0;
+
+	/* home page - overwhelmed */
+	.apex-seller-overwhelmed h1 {
+		font-size: 4rem;
 	}
 	
 
