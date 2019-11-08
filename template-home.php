@@ -186,7 +186,7 @@
     <div class="wrap">
         <p>Stop Being Stuck & Overwhelmed...</p> 
         <h1>Get Hyper-Systemized and Predictably Scale Into 7‑ and 8‑Figures</h1>
-        <a href="<?php echo site_url(); ?>/apply" class="button">LEARN HOW</a>
+        <a href="<?php echo site_url(); ?>/case-study" class="button">LEARN HOW</a>
     </div>
 </section>
 
