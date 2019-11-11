@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.11.0
+	Version: 4.12.0
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -23,6 +23,7 @@ html {
 }
 body {
 	font:300 14px/1.4 'Raleway', sans-serif;
+	margin: 0;
 
 	/*taken from global box-sizing*/
 	-webkit-font-smoothing:antialiased;
@@ -184,6 +185,9 @@ button, html input[type="button"]:hover, input[type="reset"]:hover, input[type="
 	max-width:1170px;
 	width:100%;
 	margin:0 auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .container {
 	padding: 20px;
@@ -371,7 +375,18 @@ body.admin-bar .mobile-menu-wrap {
 footer {
     text-align: center;
     font-size: 1.4rem;
-    padding: 50px 0;
+}
+.primary {
+	background: #f7f7f7;
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 20px;
+    padding: 120px 20px 20px;
+}
+.secondary {
+	margin: 20px;
+}
+.secondary .copyright p {
+	margin: 0 0 6px;
 }
 
 ul#menu-footer-menu {
@@ -385,6 +400,23 @@ ul#menu-footer-menu a {
 	padding: 10px;
 	color: #000;
 }
+.copyright-links {
+	margin: 0 0 20px;
+}
+.social > a {
+	    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.social-icons a {
+	padding: 6px;
+    background: #0047ab;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
 
 
 
@@ -2018,21 +2050,37 @@ a.close-menu {
 	.desktop-menu-wrap .nav a {
 		font-size: 18px;
 	}
-	footer.container {
-		font-size: 14px;
-	}
-	body.page footer.container {
-		text-align: left;
-		padding: 20px; 
-	}
-	.copyright {
+
+
+	/* footer */
+	.primary img {
 		float: left;
-		display: block;
 	}
 	ul#menu-footer-menu {
 		float: right;
 		display: block;
 	}
+	ul#menu-footer-menu li:last-child a {
+		padding-right: 0;
+	}
+
+	.secondary .copyright {
+		float: left;
+		text-align: left;
+	}
+	.secondary .social {
+		float: right;
+		text-align: right;
+	}
+	.secondary .copyright p {
+		margin: 0 0 20px;
+	}
+	.secondary .copyright-links {
+		margin: 0;
+	}
+
+
+	/* metrics */
 	.metrics {
 		text-align: left;
 	    max-width: 270px;
@@ -2065,7 +2113,7 @@ a.close-menu {
 	/*home page*/
 	.home-feature-graph {
 	    height: 84vh;
-	    padding: 2.5rem;
+		padding: 2.5rem;
 	}
 	.home-feature-graph .wrap {
 		display: flex;
