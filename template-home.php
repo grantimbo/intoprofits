@@ -159,7 +159,7 @@
 <section class="apex-section cutting-edge-program">
     <div class="wrap">
         <h1 class="apex-section-title withSub">Cutting-Edge Programs</h1>
-        <p class="apex-section-description"><?php the_field('course_curriculum_description'); ?></p>
+        <p class="apex-section-description"><?php the_field('programs_description'); ?></p>
 
         <div class="apex-seller-graphic-home programs-apex-seller-wrap">
 
