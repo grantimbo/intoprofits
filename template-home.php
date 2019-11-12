@@ -11,11 +11,11 @@
     <div class="v-graph-overlay"></div>
     <div class="wrap">
         <div class="v-graph-content">
-        	<P>We Help Amazon Private Label Sellers That Are Stuck & Overwhelmed</P>
-            <h1>Get Hyper-Systemized and Predictably Scale Into 7- and 8-Figures</h1>
+        	<p><?php the_field('main_pre_title'); ?></p>
+            <h1><?php the_field('main_title'); ?></h1>
         </div>
         <div class="v-graph-button">
-            <a href="<?php echo site_url(); ?>/case-study" class="btn-seehow"><span>See How</span></a>
+            <a href="<?php echo site_url(); ?>/case-study" class="btn-seehow"><span><?php the_field('main_button_text'); ?></span></a>
         </div>
     </div>
 </section>
@@ -24,10 +24,10 @@
 
 <section class="apex-section pro-grade">
     <div class="wrap">
-        <h1 class="apex-section-title withSub">Professional Grade Private Label Systems</h1>
-        <p class="apex-section-description">IntoProfits.com provides proprietary tools and processes that put you in the top 1% of sellers. It’s like upgrading your business from a streetcar into an F1 car on a racetrack.</p>
-        <h3>“You master something when it becomes <u>simple</u>”</h3>
-        <p class="apex-section-description">Most private label businesses are chaotic and fundamentally weak. We help you upgrade and streamline the foundations of your business. Then we get you fiercely focused on the few things that produce consistent results. Become efficient and effective. Drive performance through data and the scientific method. Optimize over time and win.</p>
+        <h1 class="apex-section-title withSub"><?php the_field('pro_grade_title'); ?></h1>
+        <p class="apex-section-description"><?php the_field('pro_grade_p1'); ?></p>
+        <h3>“<?php the_field('pro_grade_qoute'); ?>”</h3>
+        <p class="apex-section-description"><?php the_field('pro_grade_p2'); ?></p>
     </div>
 </section>
 
@@ -36,67 +36,67 @@
 <section class="apex-section complete-connected">
 	<div class="wrap">
 		<h1 class="apex-section-title withSub">Complete & Connected</h1>
-		<p class="apex-section-description">Forged in fire, our systems have evolved through continuous application since 2012. Most programs teach you siloed tactics but in the real-world everything is connected. And it’s the correct combination of every component that produces stunning results.</p>
+		<p class="apex-section-description"><?php the_field('connected_description'); ?></p>
 		
 		<section class="complete-connected-icons">
 			<figure>
 				<div class="imgConnected focus"></div>
-				<figcaption><b>Focus</b>Knowing what works and where to invest your time, energy and resources is critical for success. Most sellers get distracted and waste time where the ROI is low to none.</figcaption>
+				<figcaption><b>Focus</b><?php the_field('focus'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected strategy"></div>
-				<figcaption><b>Product strategy</b>Crafting offers that are strategically superior to the competition is key for long-lasting success on Amazon. Most sellers offer “me-too” products and are fighting for scraps.</figcaption>
+				<figcaption><b>Product strategy</b><?php the_field('product_strategy'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected chain"></div>
-				<figcaption><b>Supply chain</b>Running a professional supply chain that is consistent and produces world-class products at low-cost. Most sellers go out of stock, have quality issues and waste money.</figcaption>
+				<figcaption><b>Supply chain</b><?php the_field('supply_chain'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected cashflow"></div>
-				<figcaption><b>Cash flow</b>Maximizing the cash utilization in your business means faster growth and more profits. Most sellers experience slow growth due to poor usage of cash and low profit-margins.</figcaption>
+				<figcaption><b>Cash flow</b><?php the_field('cash_flow'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected systemdata"></div>
-				<figcaption><b>Systems & data</b>Building leveraged systems, designing your business for growth and using smart data. Most sellers hit a ceiling on growth due to a lack of structure, or one that doesn’t scale.</figcaption>
+				<figcaption><b>Systems & data</b><?php the_field('systems_data'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected advertising"></div>
-				<figcaption><b>Paid advertising</b>Constructing campaigns at scale, testing, optimizing, expanding market share, dominating your market! Most sellers are stuck in the stone-age with Amazon PPC.</figcaption>
+				<figcaption><b>Paid advertising</b><?php the_field('paid_advertising'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected optimization"></div>
-				<figcaption><b>Organic optimization</b>Engineering product listings that rank for everything. Keyword usage and priority, indexation, page interactions, and more. Most sellers don’t make love to the machine.</figcaption>
+				<figcaption><b>Organic optimization</b><?php the_field('organic_optimization'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected conversion"></div>
-				<figcaption><b>Conversions & AOV</b>Resonating with your market, creating offers that jump into the hands of new customers, architecting a higher AOV. Most sellers imitate and don’t know the art of salesmanship.</figcaption>
+				<figcaption><b>Conversions & AOV</b><?php the_field('conversions_aov'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected hiring"></div>
-				<figcaption><b>Hiring & managing a team</b>Assembling a force and building a real business that runs and grows without you. Most sellers never decentralize, stay stuck and hire C-players that damage their business.</figcaption>
+				<figcaption><b>Hiring & managing a team</b><?php the_field('hiring_managing_a_team'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected operations"></div>
-				<figcaption><b>Operations</b>Fine-tuning efficient, lean and transparent operations that deliver outstanding results. Most sellers build a bloated machine that drains profits and harms their ability to compete.</figcaption>
+				<figcaption><b>Operations</b><?php the_field('operations'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected automation"></div>
-				<figcaption><b>Scaling & automation</b>Identifying leverage points, refining the right parts at the right time, increasing automation. Most sellers can’t scale because their business gets worse if it grows.</figcaption>
+				<figcaption><b>Scaling & automation</b><?php the_field('scaling_automation'); ?></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected evolution"></div>
-				<figcaption><b>Product evolution</b>Constantly iterating and improving your products and selection over time. Moving into customization and innovation. Most sellers never add genuine value to the marketplace.</figcaption>
+				<figcaption><b>Product evolution</b><?php the_field('product_evolution'); ?></figcaption>
 			</figure>
 		</section>
 	</div>
@@ -107,7 +107,7 @@
 <section class="apex-section student-results">
 	<div class="wrap">
 	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
-	    <p class="apex-section-description">Does Apex Seller actually work? There is only one way to find out; by asking our students about their results with it in the real-world.</p>
+	    <p class="apex-section-description"><?php the_field('student_results_description'); ?></p>
 	    <p class="what-they-say">Here is what our students have to say:</p>
 	    <div class="results-playlist clear">
 			<div class="results-playlist-main"></div>
@@ -137,7 +137,7 @@
 					</div>
 				</a>
 		
-				<?php endwhile; endif; wp_reset_postdata(); ?>
+				<?php endwhile; endif; wp_reset_query(); ?>
 		
 			</div>
 		</div>
@@ -159,17 +159,21 @@
 <section class="apex-section cutting-edge-program">
     <div class="wrap">
         <h1 class="apex-section-title withSub">Cutting-Edge Programs</h1>
-        <p class="apex-section-description">We teach the things that no-one else is teaching. All of our programs are built from the ground-up with our own proprietary systems and processes. They are NEW, innovative and give our students a true competitive advantage.</p>
+        <p class="apex-section-description"><?php the_field('course_curriculum_description'); ?></p>
 
         <div class="apex-seller-graphic-home programs-apex-seller-wrap">
 
             <div class="wrap">
                 <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
                 <div class="programs-apex-graphic">
-                    <h1>Apex Seller™</h1>
-                    <b>Stage: Scaling Up <span class="scaleProgbar"></span></b>
-                    <p>How to scale into 7- and 8-figures by leveraging professional grade systems & data, full-scale PPC advertising, unique products and a world-class team.</p>
-                    <a href="<?php echo site_url(); ?>/programs/apex-seller" class="button">Learn More</a>
+                    
+					<?php if( have_rows('programs') ): while ( have_rows('programs') ) : the_row(); ?>
+						<h1><?php the_sub_field('title'); ?></h1>
+						<b><?php the_sub_field('subtitle'); ?> <span class="scaleProgbar"></span></b>
+						<p><?php the_sub_field('description'); ?></p>
+						<a href="<?php the_sub_field('page'); ?>" class="button">Learn More</a>
+					<?php endwhile; endif; ?>
+
                 </div>
             </div>
 
@@ -184,9 +188,9 @@
 
 <section class="apex-seller-overwhelmed">
     <div class="wrap">
-        <p>Stop Being Stuck & Overwhelmed...</p> 
-        <h1>Get Hyper-Systemized and Predictably Scale Into 7‑ and 8‑Figures</h1>
-        <a href="<?php echo site_url(); ?>/case-study" class="button">LEARN HOW</a>
+        <p><?php the_field('footer_pre_title'); ?></p> 
+        <h1><?php the_field('footer_title'); ?></h1>
+        <a href="<?php the_field('footer_btn_link'); ?>" class="button"><?php the_field('footer_btn_text'); ?></a>
     </div>
 </section>
 
