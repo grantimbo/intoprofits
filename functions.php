@@ -394,10 +394,10 @@ function activated_get_menu() {
     </style>
 
     <div class="grntx-wrap clear">
-        <a href="admin.php?page=options" class="btn-custom-setting">Options</a>
-        <a href="edit.php" class="btn-custom-setting">Articles</a>
-        <a href="edit.php?post_type=results" class="btn-custom-setting">Results</a>
-        <a href="admin.php?page=modules" class="btn-custom-setting">Modules</a>
+        <a href="admin.php?page=options" class="btn-custom-setting">Banner</a>
+        <a href="edit.php" class="btn-custom-setting">Post</a>
+        <a href="edit.php?post_type=results" class="btn-custom-setting">Testimonials</a>
+        <a href="admin.php?page=modules" class="btn-custom-setting">Apex Seller Modules</a>
     </div>
 
     <?php //-- html end -->
