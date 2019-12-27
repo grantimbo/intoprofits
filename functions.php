@@ -386,6 +386,7 @@ function activated_get_menu() {
             display: block;
             margin-bottom: 4px;
             border-radius: 3px;
+            text-decoration: none;
         }
         .btn-custom-setting:hover {
             background: #1285b1;
