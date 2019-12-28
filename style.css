@@ -1793,7 +1793,10 @@ span.curMod {
 	text-shadow:none;
 }
 
-
+/* video player fix */
+.html5-video-player:not(.ytp-transparent) {
+	background-color: #fff !important;
+}
 
 a.close-menu {
 	display: block;
