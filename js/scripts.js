@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.12.2
+// Version : 2.12.3
 // Description : Custom Script for audunsson.com
 // ---------------------------
 
