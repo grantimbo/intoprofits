@@ -55,8 +55,16 @@
 </main>
 
 */ ?>
-
- <style type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+     <style type="text/css">
     #gdwidget-upload-slot-24146db4eb {
         margin: 10px auto; width:90%; border:1px solid #aaa;
         cursor: pointer; text-align: center; font-family: arial; font-weight: bold;
@@ -79,3 +87,5 @@
         b.appendChild(js);
     </script>
     <div id="gdwidget-upload-slot-24146db4eb"></div>   
+</body>
+</html>
