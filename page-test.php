@@ -64,8 +64,8 @@
     <title>Document</title>
 </head>
 <body>
-     <style type="text/css">
-    #gdwidget-upload-slot-24146db4eb {
+<style type="text/css">
+    #gdwidget-upload-slot-3806734b25 {
         margin: 10px auto; width:90%; border:1px solid #aaa;
         cursor: pointer; text-align: center; font-family: arial; font-weight: bold;
         padding: 40px;
@@ -73,8 +73,8 @@
     }
     </style>
     <script>
-        var uploadToken = '$2y$13$nsxC77ZJqW27JkwnXQg1gOdWRAA68SR1UnpI2MlWmpc8klbQOiK.W';
-        var uploadSlot = 'gdwidget-upload-slot-24146db4eb';
+        var uploadToken = '$2y$13$//tGvc7H6tVh/PBXNJ.mmeuo5oBEE4Mtq3XSBKSNAZnFYqXqC1J3.';
+        var uploadSlot = 'gdwidget-upload-slot-3806734b25';
         // Change the below if you would like to have your own messages
         var initTxt = "<img src='https://gdwidget.com/img/icon.svg' style='width:50px;'><br/>Drag & Drop Your Files Here!";
         var successTxt = "All Files Are Being Uploaded Properly.";
@@ -86,6 +86,6 @@
         js.src='//gdwidget.com/widget/upload/render.js';
         b.appendChild(js);
     </script>
-    <div id="gdwidget-upload-slot-24146db4eb"></div>   
+    <div id="gdwidget-upload-slot-3806734b25"></div>
 </body>
 </html>
