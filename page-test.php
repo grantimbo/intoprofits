@@ -155,7 +155,9 @@
     border: none;
     margin-top: 30px;
 }
-
+.process-section button.disabled {
+    background: #ababab;
+}
 
 /* step one */
 .star-rate span {
@@ -173,11 +175,18 @@
 #kajabi-form .kajabi-form__content {
     max-width: 100% !important;
 }
+#kajabi-form .kajabi-form__content button{
+    cursor: pointer;
+}
 #kajabi-form .kajabi-form__title,
 #kajabi-form .kajabi-form__subtitle {
     display: none;
 }
 
+
+.powered-by {
+    display: none;
+}
 </style>
 
 
@@ -223,7 +232,7 @@
                 <span data-rate="4" title="Give 4 stars" onclick="changeRate(this)">★</span>
                 <span data-rate="5" title="Give 5 stars" onclick="changeRate(this)">★</span>
             </div>
-            <button class="btn btn-primary nxtStep" onclick="stepOne()">Next</button>
+            <button class="btn btn-primary disabled nxtStep" disabled onclick="stepOne()">Next</button>
         </div>
         <!-- /rate-program -->
 
@@ -238,9 +247,7 @@
             <h1>Send Us Your Video Testimonial File</h1>
             <p>The next step is to send us your video file via Dropbox or Google Drive.</p>
             <input type="text" placeholder="https://drive.google.com/videofile" id="video_url" onchange="inputVidLink(this)">
-            <br>
-            <input type="text" placeholder="Desciption" id="questions" onchange="inputQuestions(this)">
-            <button class="btn btn-primary nxtStep" onclick="stepThree()">Next</button>
+            <button class="btn btn-primary disabled nxtStep" disabled onclick="stepThree()">Next</button>
         </div>
         <!-- /upload-testimony -->
 
@@ -272,9 +279,14 @@
         if(inputText.value.match(mailformat)) {
             // document.form1.text1.focus();
             document.querySelector('input[id="form_submission_email"]').value = mail
+            document.querySelector('.process-section.one button.nxtStep').removeAttribute('disabled')
+            document.querySelector('.process-section.one button.nxtStep').classList.remove('disabled')
             return true;
         } else {
             alert("You have entered an invalid email address!");
+            document.querySelector('.process-section.one button.nxtStep').setAttribute('disabled','')
+            document.querySelector('.process-section.one button.nxtStep').classList.add('disabled')
+            
             // document.form1.text1.focus();
             return false;
         }
@@ -342,26 +354,17 @@
 
         if (vidLink != null) {
             document.querySelector('input[id="form_submission_custom_3"]').value = vidLink
+            document.querySelector('.process-section.three button.nxtStep').removeAttribute('disabled')
+            document.querySelector('.process-section.three button.nxtStep').classList.remove('disabled')
             return true
         } else {
             alert("Please enter a link");
+            document.querySelector('.process-section.three button.nxtStep').removeAttribute('disabled')
+            document.querySelector('.process-section.three button.nxtStep').classList.remove('disabled')
             return false;
         }
     }
 
-    function inputQuestions(question) {
-
-        var Questions = question.value
-
-        if (Questions != null) {
-            document.querySelector('input[id="form_submission_custom_4"]').value = Questions
-            return true
-        } else {
-            alert("Please answer the questions");
-            return false;
-        }
-
-    }
 
     function stepOne() {
         document.querySelector('div.process-section.one').classList.remove('active')
@@ -400,6 +403,8 @@
         document.querySelector('.circle-progress').classList.remove('percent50')
         document.querySelector('.circle-progress').classList.add('percent90')
         document.querySelector('.prog-label').innerHTML = "90%"
+        
+        document.querySelector('.kajabi-form__content button[type="submit"]').innerHTML = "Submit Testimony"
         
     }
 
