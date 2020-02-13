@@ -21,7 +21,7 @@
                 'post_type' => 'results',
                 'orderby'=> 'menu_order',
                 'posts_per_page' => 30,
-                'paged' => $paged
+                'nopaging' => true
             ); 
 
             $temp = $wp_query; 
