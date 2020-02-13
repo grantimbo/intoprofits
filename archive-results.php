@@ -4,7 +4,6 @@
     <main role="main" class="container reviews-head">
         <div class="wrap">
             <h1>Student Results</h1>
-            <p style="display: none;">test</p>
             <p>Our students have a unique advantage and they get real-life business results. <br> But you don’t have to take our word for it: Hear what they have to say.</p>
         </div>
     </main>
@@ -21,7 +20,7 @@
             <?php $args = array( 
                 'post_type' => 'results',
                 'orderby'=> 'menu_order',
-                // 'posts_per_page' => 30,
+                'posts_per_page' => 30,
                 'paged' => $paged
             ); 
 
