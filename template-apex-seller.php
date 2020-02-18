@@ -159,7 +159,8 @@ Template Post Type: programs
 				<?php $args = array( 
 					'post_type' => 'results',  
 					'orderby'=> 'menu_order',  
-					'paged' => $paged
+					'posts_per_page' => 30
+					// 'nopaging' => true
 				); 
 		
 				$temp = $wp_query; 
