@@ -116,7 +116,7 @@
 				<?php $args = array( 
 					'post_type' => 'results',  
 					'orderby'=> 'menu_order',  
-					'paged' => $paged
+					'posts_per_page' => 30
 				); 
 		
 				$temp = $wp_query; 
