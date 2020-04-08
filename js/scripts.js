@@ -2,7 +2,7 @@
 // Author : Grant Imbo
 // Site : grantimbo.com
 // Version : 2.12.3
-// Description : Custom Script for audunsson.com
+// Description : Custom Script for intoprofits.com
 // ---------------------------
 
 
