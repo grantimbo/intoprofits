@@ -19,9 +19,10 @@
 
             <?php $args = array( 
                 'post_type' => 'results',
+                'post_status' => 'publish',
                 'orderby'=> 'menu_order',
                 'posts_per_page' => 30,
-                'nopaging' => true
+                // 'nopaging' => true
             ); 
 
             $temp = $wp_query; 

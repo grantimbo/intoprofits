@@ -157,8 +157,9 @@ Template Post Type: programs
 			<div class="results-playlist-vids">
 		
 				<?php $args = array( 
-					'post_type' => 'results',  
-					'orderby'=> 'menu_order',  
+					'post_type' => 'results',
+					'orderby'=> 'menu_order',
+					'post_status' => 'publish',
 					'posts_per_page' => 30
 					// 'nopaging' => true
 				); 
