@@ -65,8 +65,9 @@
             <div class="clear">
 
                 <?php $args = array( 
-                    'post_type' => 'results',  
-                    'orderby'=> 'menu_order',  
+                    'post_type' => 'results',
+                    'post_status' => 'publish',
+                    'orderby'=> 'menu_order',
                     'post__not_in' => array (get_the_ID()),
                     'paged' => $paged
                 ); 

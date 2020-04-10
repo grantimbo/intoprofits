@@ -114,8 +114,9 @@
 			<div class="results-playlist-vids">
 		
 				<?php $args = array( 
-					'post_type' => 'results',  
-					'orderby'=> 'menu_order',  
+					'post_type' => 'results',
+					'post_status' => 'publish',
+					'orderby'=> 'menu_order',
 					'posts_per_page' => 30
 				); 
 		
