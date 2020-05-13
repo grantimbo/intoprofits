@@ -30,18 +30,22 @@
             $wp_query = new WP_Query(); 
             $wp_query->query( $args ); 
 
-            if($wp_query->have_posts()) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+            if($wp_query->have_posts()) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
+            
+            $title = get_field('review_title');
+            $tempDesc = get_field('review_description');
+            $desc = strlen($tempDesc) > 300 ? substr($tempDesc,0,300)."..." : $tempDesc; ?>
 
             <div class="reviews-thumb">
                 <a class="reviews-thumb-wrap blog-thumb"
                     data-id="<?php the_ID(); ?>"
                     data-video='<?php the_field('review_video'); ?>'
-                    data-title='<?php the_field('review_title'); ?>'
+                    data-title="<?php echo str_replace('"',"'",$title) ?>"
                     data-name="<?php the_field('review_name'); ?>"
                     data-location="<?php the_field('review_location'); ?>"
                     data-level="<?php the_field('review_level'); ?>"
                     data-rating="<?php the_field('review_rating'); ?>"
-                    data-description="<?php the_field('review_description'); ?>"
+                    data-description="<?php echo str_replace('"',"'",$desc) ?>"
                     href="<?php the_permalink(); ?>">
                     <span class="play-button"></span>
                     <img src="<?php the_field('review_screenshot'); ?>">
