@@ -34,7 +34,7 @@
             
             $title = get_field('review_title');
             $tempDesc = get_field('review_description');
-            $desc = strlen($tempDesc) > 300 ? substr($tempDesc,0,300)."..." : $tempDesc; ?>
+            $desc = strlen($tempDesc) > 450 ? substr($tempDesc,0,450)."..." : $tempDesc; ?>
 
             <div class="reviews-thumb">
                 <a class="reviews-thumb-wrap blog-thumb"
