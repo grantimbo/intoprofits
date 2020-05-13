@@ -40,12 +40,12 @@
                 <a class="reviews-thumb-wrap blog-thumb"
                     data-id="<?php the_ID(); ?>"
                     data-video='<?php the_field('review_video'); ?>'
-                    data-title="<?php echo str_replace('"',"'",$title) ?>"
+                    data-title="<?php echo str_replace('"',"&quot;",$title) ?>"
                     data-name="<?php the_field('review_name'); ?>"
                     data-location="<?php the_field('review_location'); ?>"
                     data-level="<?php the_field('review_level'); ?>"
                     data-rating="<?php the_field('review_rating'); ?>"
-                    data-description="<?php echo str_replace('"',"'",$desc) ?>"
+                    data-description="<?php echo str_replace('"',"&quot;",$desc) ?>"
                     href="<?php the_permalink(); ?>">
                     <span class="play-button"></span>
                     <img src="<?php the_field('review_screenshot'); ?>">
