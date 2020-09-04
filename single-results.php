@@ -68,6 +68,7 @@
                     'post_type' => 'results',
                     'post_status' => 'publish',
                     'orderby'=> 'menu_order',
+                    'posts_per_page' => 30,
                     'post__not_in' => array (get_the_ID()),
                     'paged' => $paged
                 ); 
