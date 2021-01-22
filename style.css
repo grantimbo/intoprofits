@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.12.5
+	Version: 4.12.6
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -562,7 +562,7 @@ a.btn-seehow:hover span {
 
 /* home page - pro grade */
 .pro-grade {
-    background: #0047ab url(img/pro-grade-bg.jpg) center center;
+    background: #0047ab url(img/pro-grade-bg.webp) center center;
     text-align: center;
     color: #fff;
     background-size: cover;
@@ -576,7 +576,7 @@ a.btn-seehow:hover span {
 
 /* home page- overwhelmed */
 .apex-seller-overwhelmed {
-    background: #1f1f1f url(img/overwhelmed-bg.jpg) center 30%;
+    background: #1f1f1f url(img/overwhelmed-bg.webp) center 30%;
     text-align: center;
     color: #fff;
     background-size: cover;
@@ -946,7 +946,7 @@ a.transcript-readmore {
 	height: 70px;
 }
 .exc-rate {
-    background: url(img/apex-seller-sprite.png);
+    background: url(img/apex-seller-sprite.webp);
     width: 112px;
     height: 20px;
     background-position: 0 0;

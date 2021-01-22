@@ -3,7 +3,7 @@
 
 		<div class="primary">
 			<div class="wrap clear">
-				<img src="<?php echo bloginfo('template_url'); ?>/img/footer-logo.png" alt="Apex Seller">
+				<img src="<?php echo bloginfo('template_url'); ?>/img/footer-logo.webp" alt="Apex Seller" width="36" height="38">
 				<?php footer_nav(); ?>
 			</div>
 		</div>	

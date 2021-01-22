@@ -165,7 +165,7 @@
         <div class="apex-seller-graphic-home programs-apex-seller-wrap">
 
             <div class="wrap">
-                <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
+                <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.webp" alt="Apex Seller" width="450" height="328">
                 <div class="programs-apex-graphic">
                     
 					<?php if( have_rows('programs') ): while ( have_rows('programs') ) : the_row(); ?>

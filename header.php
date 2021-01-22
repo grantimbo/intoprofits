@@ -39,12 +39,12 @@
 				<div class="mobile-menu-wrap">
 					<header class="header clear">
 					<a class="icon-cross mobile-menu"></a>
-					<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.png" alt="Into Profits"></a>
+					<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.webp" alt="Into Profits" width="200" height="23"></a>
 					<?php head_nav(); ?>
 					</header>
 				</div>
 				<a class="icon-menu mobile-menu"></a>
-				<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.png" alt="Into Profits"></a>
+				<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.webp" alt="Into Profits" width="200" height="23"></a>
 				<div class="desktop-menu-wrap">
 					<?php head_nav(); ?>
 				</div>
