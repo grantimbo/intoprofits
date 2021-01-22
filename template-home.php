@@ -130,7 +130,7 @@
 				<a class="res-link" title="<?php the_field('review_name'); ?>"
 					data-video='<?php the_field('review_video'); ?>'
 					href="<?php the_permalink(); ?>">
-					<img src="<?php the_field('review_screenshot'); ?>">
+					<img src="<?php the_field('review_screenshot'); ?>" width="500" height="281">
 					<div class="res-info">
 						<b><?php the_field('review_name'); ?></b>
 						<div class="res-level"><?php the_field('review_level'); ?> Figures</div>
