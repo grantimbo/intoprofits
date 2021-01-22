@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.12.6
+	Version: 4.12.7
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -1333,7 +1333,7 @@ img.apex-program-graphic {
 }
 .apex-side-wrap ul li:before {
 	content: "";
-    background: url(img/apex-seller-sprite.png) no-repeat -126px -1px;
+    background: url(img/apex-seller-sprite.webp) no-repeat -126px -1px;
     width: 24px;
     height: 24px;
     display: inline-block;
@@ -1372,7 +1372,7 @@ img.apex-program-graphic {
 	text-align: center;
 }
 .apex-icon {
-	background: url(img/apex-seller-sprite.png) no-repeat 0 -142px;
+	background: url(img/apex-seller-sprite.webp) no-repeat 0 -142px;
 	width:70px;
 	height: 68px;
 	display: inline-block;
@@ -1413,7 +1413,7 @@ img.apex-program-graphic {
 	margin-bottom: .5rem;
 }
 .imgConnected {
-	background: url(img/apex-seller-sprite.png) no-repeat 0 -228px;
+	background: url(img/apex-seller-sprite.webp) no-repeat 0 -228px;
 	width:88px;
 	height: 90px;
 	display: inline-block;
@@ -1504,7 +1504,7 @@ img.apex-program-graphic {
 	list-style: none;;
 }
 .imgFeatured {
-	background: url(img/apex-seller-sprite.png) no-repeat -210px -12px;
+	background: url(img/apex-seller-sprite.webp) no-repeat -210px -12px;
     width: 132px;
     height: 30px;
 	display: block;
@@ -1613,7 +1613,7 @@ span.curMod {
 
 /* components */
 .imgComponents {
-	background: url(img/apex-seller-sprite.png) no-repeat -388px 2px;
+	background: url(img/apex-seller-sprite.webp) no-repeat -388px 2px;
     width: 330px;
     height: 240px;
 	display: block;
@@ -2494,7 +2494,8 @@ a.close-menu {
         url('fonts/icomoon/icomoon.woff?huhxjf') format('woff'),
         url('fonts/icomoon/icomoon.svg?huhxjf#icomoon') format('svg');
     font-weight: normal;
-    font-style: normal;
+	font-style: normal;
+	font-display: optional;
 }
 
 [class^="icon-"], [class*=" icon-"] {
