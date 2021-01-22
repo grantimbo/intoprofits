@@ -26,7 +26,7 @@
     <div class="wrap">
         <h1 class="apex-section-title withSub"><?php the_field('pro_grade_title'); ?></h1>
         <p class="apex-section-description"><?php the_field('pro_grade_p1'); ?></p>
-        <h3>“<?php the_field('pro_grade_qoute'); ?>”</h3>
+        <h2>“<?php the_field('pro_grade_qoute'); ?>”</h2>
         <p class="apex-section-description"><?php the_field('pro_grade_p2'); ?></p>
     </div>
 </section>
@@ -130,7 +130,7 @@
 				<a class="res-link" title="<?php the_field('review_name'); ?>"
 					data-video='<?php the_field('review_video'); ?>'
 					href="<?php the_permalink(); ?>">
-					<img src="<?php the_field('review_screenshot'); ?>" width="500" height="281">
+					<img src="<?php the_field('review_screenshot'); ?>" width="246" height="138" alt="<?php the_field('review_name'); ?>">
 					<div class="res-info">
 						<b><?php the_field('review_name'); ?></b>
 						<div class="res-level"><?php the_field('review_level'); ?> Figures</div>

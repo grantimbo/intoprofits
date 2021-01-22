@@ -19,12 +19,12 @@
 				</div>
 	
 				<div class="social">
-					<a href="https://app.intoprofits.com/login" target="_blank">Login</a>
+					<a href="https://app.intoprofits.com/login" rel="noopener" aria-label="Login" target="_blank">Login</a>
 					<div class="social-icons">
-						<a class="icon-youtube" target="_blank" href="https://www.youtube.com/channel/UCOhQ7IdiVx4IKDOKRKl7RtA"></a>
-						<a class="icon-facebook" target="_blank" href="https://business.facebook.com/danielaudunssonlive"></a>
-						<a class="icon-twitter" target="_blank" href="https://twitter.com/DanielAudunsson"></a>
-						<a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/in/daniel-audunsson-81b3b27b/"></a>
+						<a class="icon-youtube" rel="noopener" aria-label="Youtube" target="_blank" href="https://www.youtube.com/channel/UCOhQ7IdiVx4IKDOKRKl7RtA"></a>
+						<a class="icon-facebook" rel="noopener" aria-label="Facebook" target="_blank" href="https://business.facebook.com/danielaudunssonlive"></a>
+						<a class="icon-twitter" rel="noopener" aria-label="Twitter" target="_blank" href="https://twitter.com/DanielAudunsson"></a>
+						<a class="icon-linkedin" rel="noopener" aria-label="Linkedin" target="_blank" href="https://www.linkedin.com/in/daniel-audunsson-81b3b27b/"></a>
 					</div>
 				</div>
 			</div>

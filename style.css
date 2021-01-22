@@ -2495,7 +2495,7 @@ a.close-menu {
         url('fonts/icomoon/icomoon.svg?huhxjf#icomoon') format('svg');
     font-weight: normal;
 	font-style: normal;
-	font-display: optional;
+	font-display: swap;
 }
 
 [class^="icon-"], [class*=" icon-"] {
