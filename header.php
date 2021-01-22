@@ -15,7 +15,7 @@
 
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/icon.ico" rel="shortcut icon">
 	    <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet" disabled>
 
 
 		<script>
@@ -38,12 +38,12 @@
 			<div class="wrap">
 				<div class="mobile-menu-wrap">
 					<header class="header clear">
-					<a class="icon-cross mobile-menu"></a>
+					<a class="icon-cross mobile-menu" href="#" rel="nofollow"></a>
 					<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.webp" alt="Into Profits" width="200" height="23"></a>
 					<?php head_nav(); ?>
 					</header>
 				</div>
-				<a class="icon-menu mobile-menu"></a>
+				<a class="icon-menu mobile-menu" href="#" rel="nofollow"></a>
 				<a class="logo" href="<?php echo site_url(); ?>"><img src="<?php echo bloginfo('template_url'); ?>/img/logo-black.webp" alt="Into Profits" width="200" height="23"></a>
 				<div class="desktop-menu-wrap">
 					<?php head_nav(); ?>

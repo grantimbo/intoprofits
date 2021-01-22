@@ -48,7 +48,7 @@
                     data-description="<?php echo str_replace('"',"&quot;",$desc) ?>"
                     href="<?php the_permalink(); ?>">
                     <span class="play-button"></span>
-                    <img src="<?php the_field('review_screenshot'); ?>">
+                    <img src="<?php the_field('review_screenshot'); ?>" width="500" height="281" alt="<?php the_field('review_name'); ?>">
                     <div class="reviews-info clear">
                         <div class="exc-rate star<?php the_field('review_rating'); ?>"></div>
                         <div class="rvinfo-lft">
