@@ -123,6 +123,9 @@ function intoprofits_styles() {
     wp_register_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css', array(), '2.1.3', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
+    wp_register_style('ralewayfont', 'https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap', array(), '1', 'all');
+    wp_enqueue_style('ralewayfont'); // Enqueue it!
+
     wp_register_style('intoprofits', get_template_directory_uri() . '/style.css', array(), '4.12.7' , 'all');
     wp_enqueue_style('intoprofits'); // Enqueue it!
 
