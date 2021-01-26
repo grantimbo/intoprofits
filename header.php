@@ -17,7 +17,7 @@
 	    <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet" disabled>
 
-
+		<script async defer crossorigin="anonymous" src="https://177233.tracking.hyros.com/v1/lst/universal-script?ph=aef7d03285e251124713a4ad35adb15aca7a4784eab242cdfe765ab0ec9882eb&tag=!hyros"></script>
 		<script>
 			window.fbAsyncInit = function() {
 				FB.init({
@@ -29,6 +29,7 @@
 			};
 		</script>
 		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+		
 
 		<?php wp_head(); ?>
 		
