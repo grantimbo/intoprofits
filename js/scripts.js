@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.12.3
+// Version : 2.13.0
 // Description : Custom Script for intoprofits.com
 // ---------------------------
 
@@ -140,10 +140,14 @@ $(function() {
 		// check if the class exist
 		if ( $('.results-playlist-main').length ) {
 
-			var firstVid = $('.res-link:first-child')[0].dataset.video
+			if ( !$('body.home-beta').length ) {
+				var firstVid = $('.res-link:first-child')[0].dataset.video
 
-			$('a.res-link:first-child').addClass('active')
-			$('.results-playlist-main').html(firstVid)
+				$('a.res-link:first-child').addClass('active')
+				$('.results-playlist-main').html(firstVid)
+
+				console.log('this will run if not home beta')
+			}
 
 			// video playlist link
 			$(document).on('click', '.results-playlist-vids .res-link', function (e) {
