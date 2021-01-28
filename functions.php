@@ -95,9 +95,10 @@ function my_async_scripts( $tag, $handle, $src ) {
 }
 
 
-// Load HTML5 Blank scripts (header.php)
+// Load Intoprofits scripts (header.php)
 add_action('init', 'intoprofits_header_scripts'); // Add Custom Scripts to wp_head
 function intoprofits_header_scripts() {
+    
     if (!is_admin()) {
 
     	wp_deregister_script('jquery'); // Deregister WordPress jQuery
@@ -117,7 +118,33 @@ function intoprofits_header_scripts() {
 }
 
 
-// Load HTML5 Blank styles
+function create_ACF_meta_in_REST() {
+    $postypes_to_exclude = ['acf-field-group','acf-field'];
+    $extra_postypes_to_include = ["page"];
+    $post_types = array_diff(get_post_types(["_builtin" => false], 'names'),$postypes_to_exclude);
+
+    array_push($post_types, $extra_postypes_to_include);
+
+    foreach ($post_types as $post_type) {
+        register_rest_field( $post_type, 'ACF', [
+            'get_callback'    => 'expose_ACF_fields',
+            'schema'          => null,
+       ]
+     );
+    }
+
+}
+
+function expose_ACF_fields( $object ) {
+    $ID = $object['id'];
+    return get_fields($ID);
+}
+
+add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
+
+
+
+// Load Styles
 add_action('wp_enqueue_scripts', 'intoprofits_styles'); // Add Theme Stylesheet
 function intoprofits_styles() {
     wp_register_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.3/normalize.min.css', array(), '2.1.3', 'all');
@@ -126,13 +153,18 @@ function intoprofits_styles() {
     wp_register_style('ralewayfont', 'https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap', array(), '1', 'all');
     wp_enqueue_style('ralewayfont'); // Enqueue it!
 
-    wp_register_style('intoprofits', get_template_directory_uri() . '/style.css', array(), '4.12.7' , 'all');
+    wp_register_style('intoprofits', get_template_directory_uri() . '/style.css', array(), '4.12.8' , 'all');
     wp_enqueue_style('intoprofits'); // Enqueue it!
+
+    wp_localize_script('intoprofitScripts', 'pbypData', array(
+        'siteUrl' => get_site_url(),
+        // 'nonce' => wp_create_nonce('wp_rest')
+    ));
 
 }
 
-// Register HTML5 Blank Navigation
-add_action('init', 'register_menus'); // Add HTML5 Blank Menu
+// Register Intoprofits Navigation
+add_action('init', 'register_menus'); // Add Intoprofits Menu
 function register_menus() {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'intoprofits'), // Sidebar Navigation
@@ -141,7 +173,7 @@ function register_menus() {
     ));
 }
 
-// HTML5 Blank navigation
+// Intoprofits navigation
 function head_nav() {
     wp_nav_menu( 
         array(
