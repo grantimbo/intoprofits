@@ -15,9 +15,10 @@
 
 <script>
 
-	let currentPage = 2,
-		loadedPosts = 0;
-		totalPosts = null;
+	let totalPosts = 0,
+		loadedPosts = 0,
+		currentPage = 0;
+		
 
 	const loadPost = () => {
 
@@ -30,8 +31,6 @@
 				.then (
 					function(response) {
 
-						totalPosts = response.headers.get('X-WP-Total')
-
 						if (response.status !== 200) {
 							console.log('Looks like there was a problem.')
 							alert('Looks like there was a problem. Please reload the page or contact us')
@@ -39,11 +38,17 @@
 						}
 
 						response.json().then(function(postData) {
+
+							totalPosts = response.headers.get('X-WP-Total')
+							loadedPosts = postData.length
+							currentPage = 1
+							
+							console.log(totalPosts)
+							console.log(loadedPosts)
+							console.log(currentPage)
 							
 							loader.setAttribute('style', 'display: none;')
 							load_more.setAttribute('style', 'display: block;')
-							
-							loadedPosts = postData.length
 
 							postData.forEach(function (post) {
 								
@@ -100,14 +105,22 @@
 	
 	const loadMore = () => {
 
-		let activePage = currentPage++
-			postsApi = siteData.homeUrl + '/wp-json/wp/v2/posts?page=' + activePage,
+			currentPage++
+
+		let postsApi = siteData.homeUrl + '/wp-json/wp/v2/posts?page=' + currentPage,
 			postsWrap = document.getElementById('postsWrap'),
 			load_more = document.getElementById('load_more'),
 			loader = document.querySelector('.loader');
+
+			
+			// console.log(loadedPosts)
+			// console.log(currentPage)
 			
 			
 			loader.setAttribute('style', 'display: block;');
+
+
+			
 
 			fetch(postsApi)
 				.then (
@@ -120,11 +133,18 @@
 						response.json().then(function(postData) {
 							
 							loader.setAttribute('style', 'display: none;')
-							loadedPosts = loadedPosts + postData.length
 
-							if ( loadedPosts <= totalPosts ) {
+							loadedPosts = loadedPosts + postData.length
+							console.log('currentPage = ' + currentPage)
+							console.log('loadedPosts = ' + loadedPosts)
+
+							console.log('totalPosts =' + totalPosts)
+							if ( totalPosts == loadedPosts ) {
+								console.log('totalPosts === loadedPosts')
 								load_more.setAttribute('style', 'display: none;')
 							}
+
+							
 
 							postData.forEach(function (post) {
 								let post_title_raw = post.title.rendered,

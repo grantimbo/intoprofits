@@ -75,7 +75,7 @@
 								mp3_wrap.innerHTML = `<audio controls><source src="`+ post.ACF.mp3 +`" type="audio/mpeg">Your browser does not support the audio element.</audio>`
 								trascript_wrap.innerHTML = `<div class="video-transcript">` + post.ACF.transcript + `<span class="transcript-readmore-wrap"><a class="button transcript-readmore">Read More</a></span></div>`
 							} else {
-								featured_media.innerHTML = '<img class="trs-four" src="'+ siteData.templateUrl +'/img/no-thumb.png" alt="Thumbnail does not exist">'
+								featured_media.innerHTML = '<img class="trs-four" src="'+ post.thumbnail+'" alt="'+ post.title.rendered +'">'
 								mp3_wrap.innerHTML = '<h4>No MP3/Audio File</h4>'
 								trascript_wrap.innerHTML = '<div class="video-transcript no-transcript"><h4>No Transcript</h4></div>'
 							}
