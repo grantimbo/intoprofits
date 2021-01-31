@@ -303,7 +303,7 @@
 
 
     const loadResults = () => {
-        let resultsApi = siteData.homeUrl + '/wp-json/wp/v2/results',
+        let resultsApi = siteData.homeUrl + '/wp-json/wp/v2/results?per_page=25',
             main_result = document.getElementById("main_result"),
             display_results = document.getElementById("display_results");
             loadingResults = document.querySelector(".loader");
