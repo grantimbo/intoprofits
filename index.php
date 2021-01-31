@@ -43,10 +43,6 @@
 							loadedPosts = postData.length
 							currentPage = 1
 							
-							console.log(totalPosts)
-							console.log(loadedPosts)
-							console.log(currentPage)
-							
 							loader.setAttribute('style', 'display: none;')
 							load_more.setAttribute('style', 'display: block;')
 
@@ -90,9 +86,14 @@
 																${post_description}
 																<a class="view-article" href="${post_link}">Read More</a>
 															</article>`
-								}
-							);
+							})
 
+							FB.init({
+								appId      : '153590798408172',
+								status     : true,
+								xfbml      : true,
+								version    : 'v2.7' // or v2.6, v2.5, v2.4, v2.3
+							});
 
 						})
 					}
