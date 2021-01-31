@@ -27,20 +27,6 @@
 		<!-- End Google Tag Manager -->
 
 		<meta name="google-site-verification" content="2SxUK6nDEpSYTdd6W35dgzkCDSPeJhijLISGo1c9dUw" />
-		
-		<!-- Facebook Tracker -->
-		<script>
-			window.fbAsyncInit = function() {
-				FB.init({
-				appId            : '153590798408172',
-				autoLogAppEvents : true,
-				xfbml            : true,
-				version          : 'v9.0'
-				});
-			};
-		</script>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-		<!-- End Facebook SDK -->
 
 		<?php wp_head(); ?>
 		

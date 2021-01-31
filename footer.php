@@ -1,6 +1,20 @@
 	<?php wp_footer(); ?>
 	<footer>
 
+		<!-- Facebook Tracker -->
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+				appId            : '153590798408172',
+				autoLogAppEvents : true,
+				xfbml            : true,
+				version          : 'v9.0'
+				});
+			};
+		</script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+		<!-- End Facebook SDK -->
+
 		<div class="primary">
 			<div class="wrap clear">
 				<img src="<?php echo bloginfo('template_url'); ?>/img/footer-logo.webp" alt="Apex Seller" width="36" height="38">
