@@ -362,7 +362,7 @@ $homeUrl = get_home_url();
 <script>
     const loadSite = () => {
 
-        let pageRest = siteData.homeUrl + '/wp-json/wp/v2/programs/769',
+        let pageRest = siteData.homeUrl + '/wp-json/wp/v2/programs/<?php echo get_the_ID(); ?>',
 
 			main_title = document.getElementById("main_title"),
 			side_features = document.getElementById("side_features"),
