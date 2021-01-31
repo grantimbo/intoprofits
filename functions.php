@@ -117,10 +117,11 @@ function intoprofits_header_scripts() {
     }
 }
 
-
+// Expose ACF fields
+add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
 function create_ACF_meta_in_REST() {
     $postypes_to_exclude = ['acf-field-group','acf-field'];
-    $extra_postypes_to_include = ["page"];
+    $extra_postypes_to_include = ["page","post","options"];
     $post_types = array_diff(get_post_types(["_builtin" => false], 'names'),$postypes_to_exclude);
 
     array_push($post_types, $extra_postypes_to_include);
@@ -134,13 +135,34 @@ function create_ACF_meta_in_REST() {
     }
 
 }
-
 function expose_ACF_fields( $object ) {
     $ID = $object['id'];
     return get_fields($ID);
 }
 
-add_action( 'rest_api_init', 'create_ACF_meta_in_REST' );
+
+
+// register REST API
+add_action('rest_api_init', 'register_rest_images' );
+function register_rest_images(){
+    register_rest_field( array('post'),
+        'thumbnail',
+        array(
+            'get_callback'    => 'get_rest_featured_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+        $img = wp_get_attachment_image_src( $object['featured_media'], 'large' );
+        return $img[0];
+    }
+    return false;
+}
+
+
 
 
 
@@ -156,8 +178,9 @@ function intoprofits_styles() {
     wp_register_style('intoprofits', get_template_directory_uri() . '/style.css', array(), '4.12.8' , 'all');
     wp_enqueue_style('intoprofits'); // Enqueue it!
 
-    wp_localize_script('intoprofitScripts', 'pbypData', array(
-        'siteUrl' => get_site_url(),
+    wp_localize_script('intoprofitScripts', 'siteData', array(
+        'homeUrl' => get_home_url(),
+        'templateUrl' => get_template_directory_uri(),
         // 'nonce' => wp_create_nonce('wp_rest')
     ));
 
@@ -333,17 +356,6 @@ if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
                 }
 
             $wpse_excerpt = trim(force_balance_tags($excerptOutput));
-
-                $excerpt_end = ' <a class="view-article" href="'. esc_url( get_permalink() ) . '">' . sprintf(__( 'Read More', 'intoprofits' ), get_the_title()) . '</a>'; 
-                $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
-
-                //$pos = strrpos($wpse_excerpt, '</');
-                //if ($pos !== false)
-                // Inside last HTML tag
-                //$wpse_excerpt = substr_replace($wpse_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
-                //else
-                // After the content
-                $wpse_excerpt .= $excerpt_end; /*Add read more in new paragraph */
 
             return $wpse_excerpt;   
 
