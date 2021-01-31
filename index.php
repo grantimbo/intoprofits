@@ -112,16 +112,8 @@
 			postsWrap = document.getElementById('postsWrap'),
 			load_more = document.getElementById('load_more'),
 			loader = document.querySelector('.loader');
-
-			
-			// console.log(loadedPosts)
-			// console.log(currentPage)
-			
 			
 			loader.setAttribute('style', 'display: block;');
-
-
-			
 
 			fetch(postsApi)
 				.then (
@@ -136,12 +128,9 @@
 							loader.setAttribute('style', 'display: none;')
 
 							loadedPosts = loadedPosts + postData.length
-							console.log('currentPage = ' + currentPage)
-							console.log('loadedPosts = ' + loadedPosts)
 
 							console.log('totalPosts =' + totalPosts)
 							if ( totalPosts == loadedPosts ) {
-								console.log('totalPosts === loadedPosts')
 								load_more.setAttribute('style', 'display: none;')
 							}
 
@@ -185,9 +174,14 @@
 																${post_description}
 																<a class="view-article" href="${post_link}">Read More</a>
 															</article>`
-								}
-							);
+							});
 
+							FB.init({
+								appId      : '153590798408172',
+								status     : true,
+								xfbml      : true,
+								version    : 'v2.7'
+							});
 
 						})
 					}
