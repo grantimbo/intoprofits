@@ -1,21 +1,28 @@
-<?php /* Template Name: Home */ get_header(); ?>
+<?php /* Template Name: Home */ 
+
+get_header(); 
+
+$tempLink = get_template_directory_uri(); 
+$siteLink = get_home_url();
+
+?>
 
 
 <section class="home-feature-graph">
     <div class="v-graph-wrap">
         <video autoplay muted loop>
-			<source src="<?php echo get_template_directory_uri(); ?>/videos/graph.mp4" type="video/mp4">
-			<source src="<?php echo get_template_directory_uri(); ?>/videos/graph.ogg" type="video/ogg">
+			<source src="<?php echo $tempLink; ?>/videos/graph.mp4" type="video/mp4">
+			<source src="<?php echo $tempLink; ?>/videos/graph.ogg" type="video/ogg">
 		</video>
     </div>
     <div class="v-graph-overlay"></div>
     <div class="wrap">
         <div class="v-graph-content">
-        	<p><?php the_field('main_pre_title'); ?></p>
-            <h1><?php the_field('main_title'); ?></h1>
+        	<p id='main_pre_title'></p>
+            <h1 id="main_title"></h1>
         </div>
         <div class="v-graph-button">
-            <a href="<?php echo site_url(); ?>/case-study" class="btn-seehow"><span><?php the_field('main_button_text'); ?></span></a>
+            <a href="<?php echo $siteLink; ?>/case-study" class="btn-seehow"><span id="main_button_text"></span></a>
         </div>
     </div>
 </section>
@@ -24,79 +31,80 @@
 
 <section class="apex-section pro-grade">
     <div class="wrap">
-        <h1 class="apex-section-title withSub"><?php the_field('pro_grade_title'); ?></h1>
-        <p class="apex-section-description"><?php the_field('pro_grade_p1'); ?></p>
-        <h2>“<?php the_field('pro_grade_qoute'); ?>”</h2>
-        <p class="apex-section-description"><?php the_field('pro_grade_p2'); ?></p>
+        <h1 class="apex-section-title withSub" id="pro_grade_title"></h1>
+        <p class="apex-section-description" id="pro_grade_p1"></p>
+        <h2>“<span id="pro_grade_qoute"></span>”</h2>
+        <p class="apex-section-description" id="pro_grade_p2"></p>
     </div>
 </section>
+
 
 
 
 <section class="apex-section complete-connected">
 	<div class="wrap">
 		<h1 class="apex-section-title withSub">Complete & Connected</h1>
-		<p class="apex-section-description"><?php the_field('connected_description'); ?></p>
+		<p class="apex-section-description" id="connected_description"></p>
 		
 		<section class="complete-connected-icons">
 			<figure>
 				<div class="imgConnected focus"></div>
-				<figcaption><b>Focus</b><?php the_field('focus'); ?></figcaption>
+				<figcaption><b>Focus</b><span id="focus"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected strategy"></div>
-				<figcaption><b>Product strategy</b><?php the_field('product_strategy'); ?></figcaption>
+				<figcaption><b>Product strategy</b><span id="product_strategy"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected chain"></div>
-				<figcaption><b>Supply chain</b><?php the_field('supply_chain'); ?></figcaption>
+				<figcaption><b>Supply chain</b><span id="supply_chain"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected cashflow"></div>
-				<figcaption><b>Cash flow</b><?php the_field('cash_flow'); ?></figcaption>
+				<figcaption><b>Cash flow</b><span id="cash_flow"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected systemdata"></div>
-				<figcaption><b>Systems & data</b><?php the_field('systems_data'); ?></figcaption>
+				<figcaption><b>Systems & data</b><span id="systems_data"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected advertising"></div>
-				<figcaption><b>Paid advertising</b><?php the_field('paid_advertising'); ?></figcaption>
+				<figcaption><b>Paid advertising</b><span id="paid_advertising"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected optimization"></div>
-				<figcaption><b>Organic optimization</b><?php the_field('organic_optimization'); ?></figcaption>
+				<figcaption><b>Organic optimization</b><span id="organic_optimization"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected conversion"></div>
-				<figcaption><b>Conversions & AOV</b><?php the_field('conversions_aov'); ?></figcaption>
+				<figcaption><b>Conversions & AOV</b><span id="conversions_aov"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected hiring"></div>
-				<figcaption><b>Hiring & managing a team</b><?php the_field('hiring_managing_a_team'); ?></figcaption>
+				<figcaption><b>Hiring & managing a team</b><span id="hiring_managing_a_team"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected operations"></div>
-				<figcaption><b>Operations</b><?php the_field('operations'); ?></figcaption>
+				<figcaption><b>Operations</b><span id="operations"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected automation"></div>
-				<figcaption><b>Scaling & automation</b><?php the_field('scaling_automation'); ?></figcaption>
+				<figcaption><b>Scaling & automation</b><span id="scaling_automation"></span></figcaption>
 			</figure>
 			
 			<figure>
 				<div class="imgConnected evolution"></div>
-				<figcaption><b>Product evolution</b><?php the_field('product_evolution'); ?></figcaption>
+				<figcaption><b>Product evolution</b><span id="product_evolution"></span></figcaption>
 			</figure>
 		</section>
 	</div>
@@ -107,40 +115,12 @@
 <section class="apex-section student-results">
 	<div class="wrap">
 	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
-	    <p class="apex-section-description"><?php the_field('student_results_description'); ?></p>
-	    <p class="what-they-say">Here is what our students have to say:</p>
+	    <p class="apex-section-description" id="student_results_description"></p>
+        <p class="what-they-say">Here is what our students have to say:</p>
+        <div class="loader"></div>
 	    <div class="results-playlist clear">
-			<div class="results-playlist-main"></div>
-			<div class="results-playlist-vids">
-		
-				<?php $args = array( 
-					'post_type' => 'results',
-					'post_status' => 'publish',
-					'orderby'=> 'menu_order',
-					'posts_per_page' => 30
-				); 
-		
-				$temp = $wp_query; 
-				$wp_query = null; 
-				$wp_query = new WP_Query(); 
-				$wp_query->query( $args ); 
-		
-				if($wp_query->have_posts()) : while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-		
-				<a class="res-link" title="<?php the_field('review_name'); ?>"
-					data-video='<?php the_field('review_video'); ?>'
-					href="<?php the_permalink(); ?>">
-					<img src="<?php the_field('review_screenshot'); ?>" width="246" height="138" alt="<?php the_field('review_name'); ?>">
-					<div class="res-info">
-						<b><?php the_field('review_name'); ?></b>
-						<div class="res-level"><?php the_field('review_level'); ?> Figures</div>
-						<div class="res-rate"><div class="exc-rate star<?php the_field('review_rating'); ?>"></div></div>
-					</div>
-				</a>
-		
-				<?php endwhile; endif; wp_reset_query(); ?>
-		
-			</div>
+            <div class="results-playlist-main" id="main_result"></div>
+			<div class="results-playlist-vids" id="display_results"></div>
 		</div>
 
         <ul class="results-featured">
@@ -150,7 +130,7 @@
             <li><div class="imgFeatured bbc"></div></li>
         </ul>
 
-        <a href="<?php echo site_url(); ?>/results" class="see-reviews">See more of our student success stories</a>
+        <a href="<?php echo $siteLink; ?>/results" class="see-reviews">See more of our student success stories</a>
 
 	</div>
 </section>
@@ -160,28 +140,22 @@
 <section class="apex-section cutting-edge-program">
     <div class="wrap">
         <h1 class="apex-section-title withSub">Cutting-Edge Programs</h1>
-        <p class="apex-section-description"><?php the_field('programs_description'); ?></p>
+        <p class="apex-section-description" id="programs_description_top"></p>
 
         <div class="apex-seller-graphic-home programs-apex-seller-wrap">
 
             <div class="wrap">
-                <img src="<?php echo bloginfo('template_url'); ?>/img/apex-seller-product-graphic.webp" alt="Apex Seller" width="450" height="328">
+                <img src="<?php echo $tempLink; ?>/img/apex-seller-product-graphic.webp" alt="Apex Seller" width="450" height="328">
                 <div class="programs-apex-graphic">
                     
-					<?php if( have_rows('programs') ): while ( have_rows('programs') ) : the_row(); ?>
-						<h1><?php the_sub_field('title'); ?></h1>
-						<b><?php the_sub_field('subtitle'); ?> <span class="scaleProgbar"></span></b>
-						<p><?php the_sub_field('description'); ?></p>
-						<a href="<?php the_sub_field('page'); ?>" class="button">Learn More</a>
-					<?php endwhile; endif; ?>
+                    <h1 id="programs_title"></h1>
+                    <b><span id="programs_subtitle"></span> <span class="scaleProgbar"></span></b>
+                    <p id="programs_description"></p>
+                    <a id="programs_page" href="" class="button">Learn More</a>
 
                 </div>
             </div>
-
         </div>
-
-        
-    
     </div>
 </section>
 
@@ -189,10 +163,163 @@
 
 <section class="apex-seller-overwhelmed">
     <div class="wrap">
-        <p><?php the_field('footer_pre_title'); ?></p> 
-        <h1><?php the_field('footer_title'); ?></h1>
-        <a href="<?php the_field('footer_btn_link'); ?>" class="button"><?php the_field('footer_btn_text'); ?></a>
+        <p id="footer_pre_title"></p> 
+        <h1 id="footer_title"></h1>
+        <a id="footer_btn_link" href="" class="button"><span id="footer_btn_text"></span></a>
     </div>
 </section>
+
+
+<script>
+    const loadSite = () => {
+
+        let pageRest = siteData.homeUrl + '/wp-json/wp/v2/pages/2',
+
+            cash_flow = document.getElementById("cash_flow"),
+            connected_description = document.getElementById("connected_description"),
+            conversions_aov = document.getElementById("conversions_aov"),
+            focus = document.getElementById("focus"),
+            footer_btn_link = document.getElementById("footer_btn_link"),
+            footer_btn_text = document.getElementById("footer_btn_text"),
+            footer_pre_title = document.getElementById("footer_pre_title"),
+            footer_title = document.getElementById("footer_title"),
+            hiring_managing_a_team = document.getElementById("hiring_managing_a_team"),
+            main_button_text = document.getElementById("main_button_text"),
+            main_pre_title = document.getElementById("main_pre_title"),
+            main_title = document.getElementById("main_title"),
+            operations = document.getElementById("operations"),
+            organic_optimization = document.getElementById("organic_optimization"),
+            paid_advertising = document.getElementById("paid_advertising"),
+            pro_grade_p1 = document.getElementById("pro_grade_p1"),
+            pro_grade_p2 = document.getElementById("pro_grade_p2"),
+            pro_grade_qoute = document.getElementById("pro_grade_qoute"),
+            pro_grade_title = document.getElementById("pro_grade_title"),
+            product_evolution = document.getElementById("product_evolution"),
+            product_strategy = document.getElementById("product_strategy"),
+
+            programs_description_top = document.getElementById("programs_description_top"),
+            programs_page = document.getElementById("programs_page"),
+            programs_subtitle = document.getElementById("programs_subtitle"),
+            programs_description = document.getElementById("programs_description"),
+            programs_title = document.getElementById("programs_title"),
+
+            scaling_automation = document.getElementById("scaling_automation"),
+            student_results_description = document.getElementById("student_results_description"),
+            supply_chain = document.getElementById("supply_chain"),
+            systems_data = document.getElementById("systems_data");
+
+            fetch(pageRest)
+                .then (
+                    function(response) {
+
+                        if (response.status !== 200) {
+                            console.log('Looks like there was a problem.')
+                            alert('Looks like there was a problem. Please reload the page or contact us')
+                            return
+                        }
+
+                        response.json().then(function(data) {
+
+                            cash_flow.innerHTML = data.ACF.cash_flow
+                            connected_description.innerHTML = data.ACF.connected_description
+                            conversions_aov.innerHTML = data.ACF.conversions_aov
+                            focus.innerHTML = data.ACF.focus
+                            footer_btn_link.setAttribute('href', data.ACF.footer_btn_link)
+                            footer_btn_text.innerHTML = data.ACF.footer_btn_text
+                            footer_pre_title.innerHTML = data.ACF.footer_pre_title
+                            footer_title.innerHTML = data.ACF.footer_title
+                            hiring_managing_a_team.innerHTML = data.ACF.hiring_managing_a_team
+                            main_button_text.innerHTML = data.ACF.main_button_text
+                            main_pre_title.innerHTML = data.ACF.main_pre_title
+                            main_title.innerHTML = data.ACF.main_title
+                            operations.innerHTML = data.ACF.operations
+                            organic_optimization.innerHTML = data.ACF.organic_optimization
+                            paid_advertising.innerHTML = data.ACF.paid_advertising
+                            pro_grade_p1.innerHTML = data.ACF.pro_grade_p1
+                            pro_grade_p2.innerHTML = data.ACF.pro_grade_p2
+                            pro_grade_qoute.innerHTML = data.ACF.pro_grade_qoute
+                            pro_grade_title.innerHTML = data.ACF.pro_grade_title
+                            product_evolution.innerHTML = data.ACF.product_evolution
+                            product_strategy.innerHTML = data.ACF.product_strategy
+
+                            programs_description_top.innerHTML = data.ACF.programs_description
+                            programs_description.innerHTML = data.ACF.programs[0].description
+                            programs_page.setAttribute('href', data.ACF.programs[0].page)
+                            programs_subtitle.innerHTML = data.ACF.programs[0].subtitle
+                            programs_title.innerHTML = data.ACF.programs[0].title
+                            
+                            scaling_automation.innerHTML = data.ACF.scaling_automation
+                            student_results_description.innerHTML = data.ACF.student_results_description
+                            supply_chain.innerHTML = data.ACF.supply_chain
+                            systems_data.innerHTML = data.ACF.systems_data
+
+                        })
+                    }
+                ).catch(function(err) {
+                    console.log('Fetch Error :-S', err)
+                    alert('Looks like there was a problem. Please reload the page or contact us')
+                }
+            )
+    }
+
+
+    const loadResults = () => {
+        let resultsApi = siteData.homeUrl + '/wp-json/wp/v2/results',
+            main_result = document.getElementById("main_result"),
+            display_results = document.getElementById("display_results");
+            loadingResults = document.querySelector(".loader");
+
+            fetch(resultsApi)
+                .then (
+                    function(response) {
+
+                        if (response.status !== 200) {
+                            console.log('Looks like there was a problem.')
+                            alert('Looks like there was a problem. Please reload the page or contact us')
+                            return
+                        }
+
+                        response.json().then(function(resultsData) {
+
+                            main_result.innerHTML = resultsData[0].ACF.review_video
+							loadingResults.setAttribute('style', 'display: none;')
+							
+                            resultsData.forEach(function (res) {
+
+                                let review_name = res.ACF.review_name,
+                                    review_video = res.ACF.review_video,
+                                    review_screenshot = res.ACF.review_screenshot,
+                                    review_link = res.link,
+                                    review_level = res.ACF.review_level,
+                                    review_rating = res.ACF.review_rating;
+
+                                    display_results.innerHTML += `<a class="res-link" title="${review_name}" data-video='${review_video}' href="${review_link}">
+                                                                        <img src="${review_screenshot}" width="246" height="138" alt="${review_name}">
+                                                                        <div class="res-info">
+                                                                            <b>${review_name}</b>
+                                                                            <div class="res-level">${review_level} Figures</div>
+                                                                            <div class="res-rate"><div class="exc-rate star${review_rating}"></div></div>
+                                                                        </div>
+                                                                    </a>`;
+                                }
+                            );
+
+
+                        })
+                    }
+                ).catch(function(err) {
+                    console.log('Fetch Error :-S', err)
+                    alert('Looks like there was a problem. Please reload the page or contact us')
+                }
+            )
+    }
+
+
+    loadSite();
+    loadResults();
+    
+
+</script>
+
 
 <?php get_footer(); ?>

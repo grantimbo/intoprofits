@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
         <?php 
-            $tempLink = get_bloginfo('template_url'); 
-            $siteLink = get_bloginfo('wpurl');
+            $tempLink = get_template_directory_uri(); 
+            $siteLink = get_home_url();
         ?>
 		
 		<link href="<?php echo $tempLink; ?>/img/icons/icon.ico" rel="shortcut icon">
@@ -148,7 +148,7 @@
 	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
 	    <p class="apex-section-description" id="student_results_description"></p>
         <p class="what-they-say">Here is what our students have to say:</p>
-        <p class="loading-results" style="font-size: 2rem; font-weight: 600; color: #0143a5;">Loading Student Results...</p>
+        <div class="loader"></div>
 	    <div class="results-playlist clear">
             <div class="results-playlist-main" id="main_result"></div>
 			<div class="results-playlist-vids" id="display_results"></div>
@@ -171,7 +171,7 @@
 <section class="apex-section cutting-edge-program">
     <div class="wrap">
         <h1 class="apex-section-title withSub">Cutting-Edge Programs</h1>
-        <p class="apex-section-description" id="programs_description"></p>
+        <p class="apex-section-description" id="programs_description_top"></p>
 
         <div class="apex-seller-graphic-home programs-apex-seller-wrap">
 
@@ -182,7 +182,7 @@
                     <h1 id="programs_title"></h1>
                     <b><span id="programs_subtitle"></span> <span class="scaleProgbar"></span></b>
                     <p id="programs_description"></p>
-                    <a id="programs_page" href="" class="button">Learn More about Apex</a>
+                    <a id="programs_page" href="" class="button">Learn More</a>
 
                 </div>
             </div>
@@ -203,11 +203,9 @@
 
 
 <script>
-    function loadSite() {
+    const loadSite = () => {
 
-        let pageRest = pbypData.siteUrl + '/wp-json/wp/v2/pages/2',
-
-            siteData = null,
+        let pageRest = siteData.homeUrl + '/wp-json/wp/v2/pages/2',
 
             cash_flow = document.getElementById("cash_flow"),
             connected_description = document.getElementById("connected_description"),
@@ -231,9 +229,10 @@
             product_evolution = document.getElementById("product_evolution"),
             product_strategy = document.getElementById("product_strategy"),
 
-            programs_description = document.getElementById("programs_description"),
+            programs_description_top = document.getElementById("programs_description_top"),
             programs_page = document.getElementById("programs_page"),
             programs_subtitle = document.getElementById("programs_subtitle"),
+            programs_description = document.getElementById("programs_description"),
             programs_title = document.getElementById("programs_title"),
 
             scaling_automation = document.getElementById("scaling_automation"),
@@ -279,6 +278,7 @@
                             product_evolution.innerHTML = data.ACF.product_evolution
                             product_strategy.innerHTML = data.ACF.product_strategy
 
+                            programs_description_top.innerHTML = data.ACF.programs_description
                             programs_description.innerHTML = data.ACF.programs[0].description
                             programs_page.setAttribute('href', data.ACF.programs[0].page)
                             programs_subtitle.innerHTML = data.ACF.programs[0].subtitle
@@ -302,11 +302,11 @@
     
 
 
-    function results() {
-        let resultsApi = pbypData.siteUrl + '/wp-json/wp/v2/results',
+    const loadResults = () => {
+        let resultsApi = siteData.homeUrl + '/wp-json/wp/v2/results',
             main_result = document.getElementById("main_result"),
             display_results = document.getElementById("display_results");
-            loadingResults = document.querySelector(".loading-results");
+            loadingResults = document.querySelector(".loader");
 
 
 
@@ -360,7 +360,7 @@
 
 
     loadSite();
-    results();
+    loadResults();
     
 
 </script>

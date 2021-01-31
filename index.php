@@ -46,8 +46,6 @@
 							loadedPosts = postData.length
 
 							postData.forEach(function (post) {
-
-								console.log(post)
 								
 								let post_title_raw = post.title.rendered,
 									post_title = post_title_raw.replace(/"/g, '&quot;');
