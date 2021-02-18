@@ -403,7 +403,8 @@ $homeUrl = get_home_url();
 			
 			side_features2 = document.getElementById("side_features2"),
 			side_footer_text2 = document.getElementById("side_footer_text2"),
-			
+
+			course_curriculum_description = document.getElementById("course_curriculum_description"),
 
             footer_title = document.getElementById("footer_title"),
 			footer_text = document.getElementById("footer_text"),
@@ -468,6 +469,8 @@ $homeUrl = get_home_url();
 							btn_app_process.setAttribute('href', data.ACF.side_button_link)
 							btn_app_process.innerHTML = data.ACF.side_button_text
 
+							
+							course_curriculum_description.innerHTML = data.ACF.course_curriculum_description
 							
 							side_footer_text2.innerHTML = data.ACF.side_footer_text
 
