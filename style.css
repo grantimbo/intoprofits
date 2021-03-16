@@ -2,7 +2,7 @@
 	Theme Name: Into Profits
 	Theme URI: http://intoprofits.com/
 	Description: A theme handcraft by Grant
-	Version: 4.13.1
+	Version: 4.13.2
 	Author: Grant Imbo
 	Author URI: http://grantimbo.com/
 	Tags: Shipping, Logistics, Profits, Sourcing, China
@@ -586,7 +586,7 @@ a.btn-seehow:hover span {
 }
 .apex-seller-overwhelmed h1 {
     font-size: 3rem;
-    max-width: 740px;
+    max-width: 850px;
     margin: 1rem auto 30px;
 }
 .apex-seller-overwhelmed a.button {
@@ -1203,30 +1203,30 @@ a.transcript-readmore {
 
 
 /*-------------------------------------*\
-	Programs Archive
+	Products Archive
 \*-------------------------------------*/
 
-.programs-container {
+.products-container {
 	font-size: 1.6rem;
 }
-.programs-head h1 {
+.products-head h1 {
 	font-size: 2.5rem;
 }
-img.programs-apex-graphic {
+img.products-apex-graphic {
 	max-width: 450px;
     width: 100%;
 }
-.programs-apex-seller-wrap {
+.products-apex-seller-wrap {
 	font-size: 1.6rem;
     text-align: center;
     padding: 50px 20px;
     box-sizing: border-box;
     background: #efefef;
 }
-.programs-apex-seller-wrap h1 {
+.products-apex-seller-wrap h1 {
 	font-size: 2.5rem;
 }
-.programs-apex-seller-wrap a.button {
+.products-apex-seller-wrap a.button {
 	text-transform: uppercase;
     font-weight: bold;
 }
@@ -1266,7 +1266,7 @@ img.programs-apex-graphic {
 
 
 /*-------------------------------------*\
-	Programs - Apex Seller
+	Products - Apex Seller
 \*-------------------------------------*/
 
 
@@ -1277,15 +1277,15 @@ img.programs-apex-graphic {
     padding: 20px;
 }
 .apex-graphics,
-.student-results,
-.program-components,
+.client-results,
+.product-components,
 .overview {
 	background: #efefef;
 }
-.student-results,
+.client-results,
 .apex-section-title,
 .apex-section-description,
-.program-components,
+.product-components,
 .get-started {
 	text-align: center;
 }
@@ -1307,7 +1307,7 @@ img.programs-apex-graphic {
 	padding: 20px;
 	font-size: 1.5rem;
 }
-img.apex-program-graphic {
+img.apex-product-graphic {
 	margin: 3rem auto;
 	display: block;
 }
@@ -1997,7 +1997,7 @@ button#load_more {
 
 
 	/* apex-page - results */
-	.student-results {
+	.client-results {
 		font-size: 1.8rem;
 	}
     .results-playlist-main {
@@ -2034,7 +2034,7 @@ button#load_more {
 
 
 
-	/* apex-page - program-components */
+	/* apex-page - product-components */
 	.component-icons figure {
 		grid-template-columns: repeat(2, 1fr);
 		display: grid;
@@ -2301,25 +2301,25 @@ button#load_more {
 
 
 
-	/* programs page */
-	.programs-container {
+	/* products page */
+	.products-container {
 		font-size: 2rem;
 	}
-	.programs-container .wrap {
+	.products-container .wrap {
 		text-align: center;
 		margin: 8rem auto;
 		max-width: 800px;
 	}
-	.programs-head h1 {
+	.products-head h1 {
 		font-size: 3.5rem;
 	}
-	.programs-apex-seller-wrap {
+	.products-apex-seller-wrap {
 		font-size: 2rem;
 	}
-	.programs-apex-seller-wrap h1 {
+	.products-apex-seller-wrap h1 {
 		font-size: 3.5rem;
 	}
-	.programs-apex-seller-wrap .wrap {
+	.products-apex-seller-wrap .wrap {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 1.5rem;
@@ -2347,7 +2347,7 @@ button#load_more {
 
 
     /* apex-page - main */
-	.apex-program-content {
+	.apex-product-content {
 		display: grid;
 		grid-template-columns: auto 390px;
 		grid-auto-rows: minmax(200px, auto);
@@ -2463,7 +2463,7 @@ button#load_more {
 	.apex-side-wrap .button {
 		font-size: 2.5rem;
 	}
-	.apex-program-content {
+	.apex-product-content {
 		display: grid;
 		grid-template-columns: auto 460px;
 	}
@@ -2492,7 +2492,7 @@ button#load_more {
 	
 
 	/* apex-page - components */
-	.program-components {
+	.product-components {
 		font-size: 1.8rem;
 	}
 	.component-icons figcaption b {

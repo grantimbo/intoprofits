@@ -1,7 +1,7 @@
 // ---------------------------
 // Author : Grant Imbo
 // Site : grantimbo.com
-// Version : 2.13.1
+// Version : 2.13.2
 // Description : Custom Script for intoprofits.com
 // ---------------------------
 
@@ -34,20 +34,10 @@ $(function() {
 
 		if ( $('body').hasClass('post-type-archive-results') || $('body').hasClass('single-results')) {
 
-			$(".mobile-menu-wrap a:contains('Student Results')").closest('li').addClass('active')
+			$(".mobile-menu-wrap a:contains('Client Results')").closest('li').addClass('active')
 			$(".mobile-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
 
-			$(".desktop-menu-wrap a:contains('Student Results')").closest('li').addClass('active')
-			$(".desktop-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
-		}
-
-
-		if ($('body').hasClass('post-type-archive-programs') || $('body').hasClass('single-programs')) {
-
-			$(".mobile-menu-wrap a:contains('Programs')").closest('li').addClass('active')
-			$(".mobile-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
-
-			$(".desktop-menu-wrap a:contains('Programs')").closest('li').addClass('active')
+			$(".desktop-menu-wrap a:contains('Client Results')").closest('li').addClass('active')
 			$(".desktop-menu-wrap a:contains('Channel')").closest('li').removeClass('active')
 		}
 

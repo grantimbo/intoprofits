@@ -112,11 +112,11 @@ $siteLink = get_home_url();
 
 
 
-<section class="apex-section student-results">
+<section class="apex-section client-results">
 	<div class="wrap">
-	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
-	    <p class="apex-section-description" id="student_results_description"></p>
-        <p class="what-they-say">Here is what our students have to say:</p>
+	    <h1 class="apex-section-title withSub">Proven Client Results</h1>
+	    <p class="apex-section-description" id="client_results_description"></p>
+        <p class="what-they-say">Here is what our clients have to say:</p>
         <div class="loader"></div>
 	    <div class="results-playlist clear">
             <div class="results-playlist-main" id="main_result"></div>
@@ -130,28 +130,28 @@ $siteLink = get_home_url();
             <li><div class="imgFeatured bbc"></div></li>
         </ul>
 
-        <a href="<?php echo $siteLink; ?>/results" class="see-reviews">See more of our student success stories</a>
+        <a href="<?php echo $siteLink; ?>/results" class="see-reviews">See more of our client success stories</a>
 
 	</div>
 </section>
 
 
 
-<section class="apex-section cutting-edge-program">
+<section class="apex-section cutting-edge-product">
     <div class="wrap">
-        <h1 class="apex-section-title withSub">Cutting-Edge Programs</h1>
-        <p class="apex-section-description" id="programs_description_top"></p>
+        <h1 class="apex-section-title withSub">Cutting-Edge Products</h1>
+        <p class="apex-section-description" id="products_description_top"></p>
 
-        <div class="apex-seller-graphic-home programs-apex-seller-wrap">
+        <div class="apex-seller-graphic-home products-apex-seller-wrap">
 
             <div class="wrap">
                 <img src="<?php echo $tempLink; ?>/img/apex-seller-product-graphic.webp" alt="Apex Seller" width="450" height="328">
-                <div class="programs-apex-graphic">
+                <div class="products-apex-graphic">
                     
-                    <h1 id="programs_title"></h1>
-                    <b><span id="programs_subtitle"></span> <span class="scaleProgbar"></span></b>
-                    <p id="programs_description"></p>
-                    <a id="programs_page" href="" class="button">Learn More</a>
+                    <h1 id="products_title"></h1>
+                    <b><span id="products_subtitle"></span> <span class="scaleProgbar"></span></b>
+                    <p id="products_description"></p>
+                    <a id="products_page" href="" class="button">Learn More</a>
 
                 </div>
             </div>
@@ -197,14 +197,14 @@ $siteLink = get_home_url();
             product_evolution = document.getElementById("product_evolution"),
             product_strategy = document.getElementById("product_strategy"),
 
-            programs_description_top = document.getElementById("programs_description_top"),
-            programs_page = document.getElementById("programs_page"),
-            programs_subtitle = document.getElementById("programs_subtitle"),
-            programs_description = document.getElementById("programs_description"),
-            programs_title = document.getElementById("programs_title"),
+            products_description_top = document.getElementById("products_description_top"),
+            products_page = document.getElementById("products_page"),
+            products_subtitle = document.getElementById("products_subtitle"),
+            products_description = document.getElementById("products_description"),
+            products_title = document.getElementById("products_title"),
 
             scaling_automation = document.getElementById("scaling_automation"),
-            student_results_description = document.getElementById("student_results_description"),
+            client_results_description = document.getElementById("client_results_description"),
             supply_chain = document.getElementById("supply_chain"),
             systems_data = document.getElementById("systems_data");
 
@@ -242,14 +242,14 @@ $siteLink = get_home_url();
                             product_evolution.innerHTML = data.ACF.product_evolution
                             product_strategy.innerHTML = data.ACF.product_strategy
 
-                            programs_description_top.innerHTML = data.ACF.programs_description
-                            programs_description.innerHTML = data.ACF.programs[0].description
-                            programs_page.setAttribute('href', data.ACF.programs[0].page)
-                            programs_subtitle.innerHTML = data.ACF.programs[0].subtitle
-                            programs_title.innerHTML = data.ACF.programs[0].title
+                            products_description_top.innerHTML = data.ACF.programs_description
+                            products_description.innerHTML = data.ACF.programs[0].description
+                            products_page.setAttribute('href', data.ACF.programs[0].page)
+                            products_subtitle.innerHTML = data.ACF.programs[0].subtitle
+                            products_title.innerHTML = data.ACF.programs[0].title
                             
                             scaling_automation.innerHTML = data.ACF.scaling_automation
-                            student_results_description.innerHTML = data.ACF.student_results_description
+                            client_results_description.innerHTML = data.ACF.client_results_description
                             supply_chain.innerHTML = data.ACF.supply_chain
                             systems_data.innerHTML = data.ACF.systems_data
 

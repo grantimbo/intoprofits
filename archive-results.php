@@ -3,8 +3,8 @@
     <!-- reviews head -->
     <main role="main" class="container reviews-head">
         <div class="wrap">
-            <h1>Student Results</h1>
-            <p>Our students have a unique advantage and they get real-life business results. <br> But you don’t have to take our word for it: Hear what they have to say.</p>
+            <h1>Client Results</h1>
+            <p>Our clients have a unique advantage and they get real-life business results. <br> But you don’t have to take our word for it: Hear what they have to say.</p>
         </div>
     </main>
 

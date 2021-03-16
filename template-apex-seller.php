@@ -1,7 +1,6 @@
-<?php /*
-Template Name: Apex Seller
-Template Post Type: programs
-*/ 
+<?php
+
+/* Template Name: Apex Seller */ 
 
 get_header(); 
 
@@ -16,12 +15,12 @@ $homeUrl = get_home_url();
     <div class="wrap">
     	<h1 class="apex-section-title" id="main_title"></h1>
 		
-		<div class="apex-program-content">
-			<img class="apex-program-graphic" src="<?php echo $templateUrl; ?>/img/apex-seller-product-graphic.png" width="537" height="392" alt="Apex Seller">
+		<div class="apex-product-content">
+			<img class="apex-product-graphic" src="<?php echo $templateUrl; ?>/img/apex-seller-product-graphic.png" width="537" height="392" alt="Apex Seller">
 
 			<div class="apex-side-wrap">
 				<h1>Apex Seller&#8482;</h1>
-				<div class="ratings"><div class="exc-rate star5"></div><a href="<?php echo $homeUrl; ?>/results" class="see-results">See student results</a></div>
+				<div class="ratings"><div class="exc-rate star5"></div><a href="<?php echo $homeUrl; ?>/results" class="see-results">See client results</a></div>
 				<span class="last-updated">Last updated: 01/30/2021</span>
 				
 				<ul id="side_features"></ul>
@@ -145,11 +144,11 @@ $homeUrl = get_home_url();
 
 
 
-<div class="apex-section student-results">
+<div class="apex-section client-results">
 	<div class="wrap">
-	    <h1 class="apex-section-title withSub">Proven Student Results</h1>
-	    <p class="apex-section-description" id="student_results_description"></p>
-	    <p class="what-they-say">Here is what our students have to say:</p>
+	    <h1 class="apex-section-title withSub">Proven Client Results</h1>
+	    <p class="apex-section-description" id="client_results_description"></p>
+	    <p class="what-they-say">Here is what our clients have to say:</p>
 	    <div class="loader"></div>
 	    <div class="results-playlist clear">
             <div class="results-playlist-main" id="main_result"></div>
@@ -163,7 +162,7 @@ $homeUrl = get_home_url();
             <li><div class="imgFeatured bbc"></div></li>
         </ul>
 
-        <a href="<?php echo $homeUrl; ?>/results" class="see-reviews">See more of our student success stories</a>
+        <a href="<?php echo $homeUrl; ?>/results" class="see-reviews">See more of our client success stories</a>
 
 	</div>
 </div>
@@ -226,9 +225,9 @@ $homeUrl = get_home_url();
 
 
 
-<div class="apex-section program-components">
+<div class="apex-section product-components">
 	<div class="wrap">
-		<h1 class="apex-section-title withSub">Apex Seller&#8482; Program Components</h1>
+		<h1 class="apex-section-title withSub">Apex Seller&#8482; Product Components</h1>
 		<p class="apex-section-description"><span id="components_description"></span></p>
 		
 		<section class="component-icons">
@@ -254,11 +253,11 @@ $homeUrl = get_home_url();
 			
 			<figure class="for-mobile">
 				<div class="imgComponents community"></div>
-				<figcaption><b>Exclusive Student Community</b><span id="exclusive_student_community"></span></figcaption>
+				<figcaption><b>Exclusive Client Community</b><span id="exclusive_client_community"></span></figcaption>
 			</figure>
 
 			<figure class="for-desktop">
-				<figcaption><b>Exclusive Student Community</b><span id="exclusive_student_community2"></span></figcaption>
+				<figcaption><b>Exclusive Client Community</b><span id="exclusive_client_community2"></span></figcaption>
 				<div class="imgComponents community"></div>
 			</figure>
 			
@@ -280,7 +279,7 @@ $homeUrl = get_home_url();
 		<ul>
 		
 			<li>
-				<h5>Program Overview</h5>
+				<h5>Product Overview</h5>
 				<section class="apex-graphics-icons">
 					<figure>
 						<div class="apex-icon stage"></div>
@@ -334,12 +333,12 @@ $homeUrl = get_home_url();
 	<div class="wrap">
     	<h1 class="apex-section-title" id="footer_title"></h1>
     	
-    	<div class="apex-program-content">
-			<img class="apex-program-graphic" src="<?php echo $templateUrl; ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
+    	<div class="apex-product-content">
+			<img class="apex-product-graphic" src="<?php echo $templateUrl; ?>/img/apex-seller-product-graphic.png" alt="Apex Seller">
 
 			<div class="apex-side-wrap">
 				<h1>Apex Seller&#8482;</h1>
-				<div class="ratings"><div class="exc-rate star5"></div><a href="<?php echo $homeUrl; ?>/results" class="see-results">See student results</a></div>
+				<div class="ratings"><div class="exc-rate star5"></div><a href="<?php echo $homeUrl; ?>/results" class="see-results">See client results</a></div>
 				<span class="last-updated">Last updated: 01/30/2021</span>
 				
 				<ul id="side_features2"></ul>
@@ -361,8 +360,7 @@ $homeUrl = get_home_url();
 
 <script>
     const loadSite = () => {
-
-        let pageRest = siteData.homeUrl + '/wp-json/wp/v2/programs/<?php echo get_the_ID(); ?>',
+        let pageRest = siteData.homeUrl + '/wp-json/wp/v2/pages/<?php echo get_the_ID(); ?>',
 
 			main_title = document.getElementById("main_title"),
 			side_features = document.getElementById("side_features"),
@@ -385,14 +383,14 @@ $homeUrl = get_home_url();
 			scaling_automation = document.getElementById("scaling_automation"),
 			product_evolution = document.getElementById("product_evolution"),
 
-			// Program Components
+			// Product Components
             components_description = document.getElementById("components_description"),
 			online_content_portal = document.getElementById("online_content_portal"),
 			proprietary_process_documents = document.getElementById("proprietary_process_documents"),
 			proprietary_process_documents2 = document.getElementById("proprietary_process_documents2"),
 			live_qa_calls = document.getElementById("live_qa_calls"),
-			exclusive_student_community = document.getElementById("exclusive_student_community"),
-			exclusive_student_community2 = document.getElementById("exclusive_student_community2"),
+			exclusive_client_community = document.getElementById("exclusive_client_community"),
+			exclusive_client_community2 = document.getElementById("exclusive_client_community2"),
 			private_industrial_grade_software = document.getElementById("private_industrial_grade_software"),
 
 			// Entry Requirements
@@ -453,14 +451,14 @@ $homeUrl = get_home_url();
 							scaling_automation.innerHTML = data.ACF.scaling_automation
 							product_evolution.innerHTML = data.ACF.product_evolution
 
-							// Program Components
+							// Product Components
 							components_description.innerHTML = data.ACF.components_description
 							online_content_portal.innerHTML = data.ACF.online_content_portal
 							proprietary_process_documents.innerHTML = data.ACF.proprietary_process_documents
 							proprietary_process_documents2.innerHTML = data.ACF.proprietary_process_documents
 							live_qa_calls.innerHTML = data.ACF.live_qa_calls
-							exclusive_student_community.innerHTML = data.ACF.exclusive_student_community
-							exclusive_student_community2.innerHTML = data.ACF.exclusive_student_community
+							exclusive_client_community.innerHTML = data.ACF.exclusive_client_community
+							exclusive_client_community2.innerHTML = data.ACF.exclusive_client_community
 							private_industrial_grade_software.innerHTML = data.ACF.private_industrial_grade_software
 
 							// Entry Requirements
