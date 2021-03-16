@@ -147,7 +147,7 @@ $homeUrl = get_home_url();
 <div class="apex-section client-results">
 	<div class="wrap">
 	    <h1 class="apex-section-title withSub">Proven Client Results</h1>
-	    <p class="apex-section-description" id="client_results_description"></p>
+	    <p class="apex-section-description" >Does Apex Seller actually work? There is only one way to find out; by asking our clients about their results with it in the real-world.</p>
 	    <p class="what-they-say">Here is what our clients have to say:</p>
 	    <div class="loader"></div>
 	    <div class="results-playlist clear">
