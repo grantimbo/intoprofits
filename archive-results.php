@@ -19,7 +19,7 @@
         
         <!-- review footer -->
         <div class="reviews-footer">
-            <a href="<?php echo get_home_url(); ?>/case-study" class="button go-intoprofits">Access The Free Case Study</a>
+            <a href="<?php echo get_home_url(); ?>/case-study" class="button go-intoprofits">ACCESS OUR $183M+ CASE STUDY</a>
         </div>
             
     </div>
